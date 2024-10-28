@@ -11,7 +11,7 @@ html{
   scroll-behavior: smooth;
   initial-letter: 2;
   box-sizing: border-box;
-  
+
 
   overflow: scroll;
 
@@ -20,29 +20,27 @@ html{
 
 /* css variable selector - important*/
 :root {
-  --bgcolor: rgb(12, 6, 51);
+
   --blurry: backdrop-filter: blur(8px);
+  --bg-color: background-color: #333;
+  --mdb-primary: #your-primary-color;
+  --mdb-secondary: #your-secondary-color;
+  --list: list-style:none;
 
 
 
 }
 
 
-#navbar-placeholder { 
-  background-color: var(--blurry);
-  color:antiquewhite;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000
 
 
-#contact-card {
+.container-lg {
+
+
+
 
 
 }
-
-
 
 
 
@@ -51,10 +49,16 @@ main {
 
 overflow-y:scroll;
 
+}
 
 
 
+#card { 
+  background-color: var(--bg-color);
 
+  
+
+  }
 
 
 
@@ -65,16 +69,12 @@ margin: 0px;   height: 300px;
 }
 
 
+
 body {
 
 
  
 
-
-
-  /*
-  
-*/
 
 
 
@@ -208,43 +208,11 @@ nav.stroke ul li
   position: relative;
 }
 
-#nav-item {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: '.';
-  color: transparent;
-  background: #aaa;
-  height: 1px;
-}
- a:hover:after {
-  width: 100%;
-}
 
 #nav-item {
   transition: all 2s;
 }
 
-#nav-item {
-  text-align: left;
-  content: '.';
-  margin: 0;
-  opacity: 0;
-}
-nav.fill ul li a:hover {
-  color: ;
-  z-index: 1;
-}
-nav.fill ul li a:hover:after {
-  z-index: -10;
-  animation: fill 1s forwards;
-  -webkit-animation: fill 1s forwards;
-  -moz-animation: fill 1s forwards;
-  opacity: 1;
-}
 
 
 
@@ -252,29 +220,6 @@ nav.fill ul li a:hover:after {
 
 
 
-
-
-
-
-
-
-#site-title-placeholder  {
-  
-  font-size: 2.8rem;
-  font-family: "Source Code Pro", monospace;
-
-}
-
-
-
-#contact-card-placeholder {
-
-  
-  padding: 1em; /* 16px */
-  font-family: 'Source Code Pro', monospace;
-
-
-}
 
 
 
@@ -294,40 +239,32 @@ nav.fill ul li a:hover:after {
   right: 30px;
 
   background-color: #333;
-  color: white;
+  color: rgb(195, 210, 252);
 
 }
 
 
 
 
-#main-navbar {
-  margin: 20px;
-  color: #f0b3c2;
-
-
-
-}
-
-.skills {
- flex-direction: row;
- flex-wrap: wrap;
-text
-
+/*back to top button hidden*/
+#myBtn {
+  position:fixed;
+  bottom: 36px;
+  right: 30px;
+  inline-size: 90px;
+  z-index: 1000;
+  cursor:grabbing;
+  display: none;
 
 }
 
 
+  
 
 
 
-.row {
 
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 100%;
-  flex-direction: column; /*fix*/
-}
+
 
 
 
@@ -348,11 +285,9 @@ p {
 	min-height: 450px;
 }
 
-footer {
 
 
- }
- 
+
  #footer-list {
   -webkit-backdrop-filter: blur(4.5px);
 
@@ -386,13 +321,6 @@ footer {
  }
 
 
- border-radius: 14px;g 
-backdrop-filter: blur(6.9px); 
--webkit-backdrop-filter: blur(6.9px);
-
-
-
-}
 
 
 
@@ -400,17 +328,8 @@ backdrop-filter: blur(6.9px);
 
 
 
-/*back to top button hidden*/
-#myBtn {
-  position:fixed;
-  bottom: 36px;
-  right: 30px;
-  inline-size: 90px;
-  z-index: 1000;
-  cursor:grabbing;
-  display: none;
 
-}
+
 
 
 
@@ -512,7 +431,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Style for all placeholder elements */
-#skills-list-placeholder, #contact {
+.container-lg {
 
 
 
@@ -563,15 +482,6 @@ font-size: large;
  
 
 
-nav fix {
-background: rgba(200, 122, 164, 0.07);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(3.6px);
--webkit-backdrop-filter: blur(3.6px);
-
- }
- 
 
  
  #alert-placeholder {
