@@ -1,0 +1,442 @@
+
+
+
+
+html{
+  height: 100vh; 
+  width: 100vw; 
+  scroll-behavior: smooth;
+  initial-letter: 2;
+  box-sizing: border-box;
+
+
+  overflow: scroll;
+
+}
+
+
+/* css variable selector - important*/
+:root {
+
+  --blurry: backdrop-filter: blur(8px);
+  --bg-color: background-color: #333;
+  --mdb-primary: #your-primary-color;
+  --mdb-secondary: #your-secondary-color;
+  --list: list-style:none;
+
+
+
+}
+
+
+
+
+
+
+
+
+main {
+
+overflow-y:scroll;
+
+}
+
+
+
+#card { 
+  background-color: var(--bg-color);
+
+  
+
+  }
+
+
+
+/* .item { flex-basis: 50%; } /*gives flex-items a base ideal  
+margin: 0px;   height: 300px;
+  padding: 0px; */
+ /*flex container height, main elements inside it stay this height*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* underline hover effect*/
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  font: bold 1.5rem sans-serif;
+  text-transform: uppercase;
+
+}
+ul li {
+  padding: 0 .5em .25em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: .3s;
+}
+ul li:hover {
+  color: #fff;
+}
+ul li:before {
+  content: "";
+  position: absolute;
+  inset: calc(100% - 3px) 0 0 0; /* 3px = the thickness */
+  background: #ce4f20; /* the color */
+  scale: 0 1;
+  transition: .3s, translate 0s .3s;
+}
+ul:hover li:before {
+  scale: 1;
+}
+ul li:hover:before {
+  translate: 0;
+  transition: .3s;
+}
+ul:hover li:has(~ li:hover):before {
+  translate: 100% 0;
+  transition: .2s .2s,scale 0s .4s;
+}
+ul:hover li:hover ~ li:before {
+  translate: -100% 0;
+  transition: .2s .2s,scale 0s .4s;
+}
+
+
+
+
+
+
+
+
+/* horizontal list wrap*/
+.list-group{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+.list-group-item{
+  min-width: 200px;
+}
+
+ul li {
+  list-style: none;
+  margin: 0 15px;
+
+
+
+
+}
+
+
+
+ul{
+
+  transition: .5s;
+  list-style: none;
+
+
+
+  transition: .5s;
+
+
+}
+
+ ul::before {
+  content: '';
+  position: absolute;
+
+
+  border-radius: 50%;
+  background: #ffee10;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+ 
+}
+
+  ul li:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+
+  ul li:hover {
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+
+nav.stroke ul li
+
+/* nav underline stroke*/
+ a #nav-link {
+  position: relative;
+}
+
+
+#nav-item {
+  transition: all 2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.site-title:visited, h2:visited {
+  text-decoration: none;
+
+
+}
+
+
+#btn-top {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+
+  background-color: #333;
+  color: rgb(195, 210, 252);
+
+}
+
+
+
+
+/*back to top button hidden*/
+#myBtn {
+  position:fixed;
+  bottom: 36px;
+  right: 30px;
+  inline-size: 90px;
+  z-index: 1000;
+  cursor:grabbing;
+  display: none;
+
+}
+
+
+  
+
+
+
+
+
+
+
+
+p {
+
+  font-family: "DM Sans", sans-serif;
+
+
+}
+/* Change the color of the first line in a paragraph */
+.container::first-line {
+ 
+  font-weight: bold;
+}
+
+
+.force-overflow {
+	min-height: 450px;
+}
+
+
+
+
+
+.myul {
+  display: inline-block;
+  text-align: left;
+
+
+}
+
+
+
+.img{
+  margin-left: -100px;
+  right: -60px;
+ }
+ 
+ .display-1{
+   font-size: 160px;
+   font-weight: 1000;
+ 
+ }
+ 
+ .position-absolute{
+   font-weight: 700;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+/* scrollbar*/
+body::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(216, 203, 203, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(24, 11, 14);
+  outline: 2px solid rgb(22, 1, 6);
+}
+
+
+
+
+/* Style for all placeholder elements */
+.container-lg {
+
+
+
+
+  background-color: rgb(7, 7, 27);
+  border: 2px;
+  border-color: #a6cfc0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #888;
+  margin: 20px 0; /* Space between placeholders */
+
+
+
+    /*flex container height, main elements inside it stay this height
+   width: 250rem;
+  height: 100rem;
+  */
+
+  /*top right bottom left - shorthand*/
+  padding: 3rem 5rem;
+  
+  text-align:center;
+  text-align:center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 30 vh;
+ 
+  justify-content: flex-evenly;
+  font-family: "EB Garamond", serif;
+  flex: 2; 
+  justify-content: flex-evenly;
+
+font-size: large;
+
+
+ }
+ 
+ 
+ /* Individual placeholders for specific sections */
+#header-placeholder {
+  height: 80px; /* Adjust height for header */
+ 
+
+ }
+ 
+
+
+
+ 
+ #alert-placeholder {
+  font-family: "Source Code Pro", monospace;
+
+  width: 16rem; 
+  height: 30rem;
+ 
+  font-size: 16px;
+
+
+ }
+ 
+ #skills-placeholder {
+  height: 200px; /* Adjust height for skills section */
+  background-color: hashtag#e2e3e5;
+  display: inline;
+
+
+ }
+ 
+ #carousel-placeholder {
+  height: 300px; /* Adjust height for carousel */
+  background-color: hashtag#f7f7f7;
+ }
+ 
+ #spotify-placeholder {
+  height: 180px; /* Adjust height for Spotify playlist */
+  background-color: hashtag#f0f0f0;
+ }
+ 
+ #about-placeholder {
+  height: 250px; /* Adjust height for about section */
+  background-color: hashtag#e9ecef;
+ }
+ 
+ #contact-card-placeholder {
+  height: 350px; /* Adjust height for contact card */
+  background-color: hashtag#f5f5f5;
+ }
+ 
+ #footer-placeholder {
+ 
+ 
+  font-family: "Source Code Pro", monospace;
+ 
+   grid-area: span;
+   background:linear-gradient(blur);
+ 
+   text-decoration: none;
+ 
+
+   top: 80px;
+  background-blend-mode: luminosity;
+ 
+ 
+ 
+ 
+ }
