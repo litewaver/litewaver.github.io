@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+@import '~mdb-ui-kit/css/mdb.min.css';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+>>>>>>> 7f9324ccb0586c9cb3cd046dd0deb3512067cd24
 
 
 
@@ -31,6 +37,16 @@ html{
 
 
 
+<<<<<<< HEAD
+=======
+.container-lg {
+
+
+
+
+
+}
+>>>>>>> 7f9324ccb0586c9cb3cd046dd0deb3512067cd24
 
 
 
@@ -56,12 +72,29 @@ overflow-y:scroll;
 margin: 0px;   height: 300px;
   padding: 0px; */
  /*flex container height, main elements inside it stay this height*/
+<<<<<<< HEAD
+=======
+}
+
+
+
+body {
+
+
+ 
+>>>>>>> 7f9324ccb0586c9cb3cd046dd0deb3512067cd24
 
 
 
 
 
 
+<<<<<<< HEAD
+=======
+ }
+
+
+>>>>>>> 7f9324ccb0586c9cb3cd046dd0deb3512067cd24
 
 
 
@@ -267,6 +300,16 @@ p {
 
 
 
+<<<<<<< HEAD
+=======
+ #footer-list {
+  -webkit-backdrop-filter: blur(4.5px);
+
+
+
+}
+
+>>>>>>> 7f9324ccb0586c9cb3cd046dd0deb3512067cd24
 
 .myul {
   display: inline-block;
@@ -327,7 +370,84 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+<<<<<<< HEAD
 
+=======
+/* hero area */
+
+.about-img{
+ margin-left: -100px;
+ right: -60px;
+}
+
+.display-1{
+  font-size: 160px;
+  font-weight: 1000;
+ 
+}
+
+.position-absolute{
+  font-weight: 700;
+}
+
+/*margin padding spacing*/
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.ms-1 {
+  margin-left: ($spacer * .25) !important;
+}
+
+.px-2 {
+  padding-left: ($spacer * .5) !important;
+  padding-right: ($spacer * .5) !important;
+}
+
+.p-3 {
+  padding: $spacer !important;
+}
+
+
+/* media query example */
+#wrapper {width:95%;  margin: 0 auto; }
+
+#header {width:100%; }
+
+#content {width:100%; }
+
+#sidebar {width:100%; }
+
+#footer {width:100%; }
+
+// Small devices (landscape phones, 576px and up)
+
+@media (min-width: 576px) {
+
+// Medium devices (tablets, 768px and up)
+
+@media (min-width: 768px) {
+
+#wrapper {width:90%;  margin: 0 auto; }
+
+#content {width:70%; float:left; }
+
+#sidebar {width:30%; float:right; }
+
+// Large devices (desktops, 992px and up)
+
+@media (min-width: 992px) { ... }
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+
+@media (min-width: 1200px) {
+
+#wrapper {width:90%;  margin: 0 auto; }
+
+}
+>>>>>>> 7f9324ccb0586c9cb3cd046dd0deb3512067cd24
 
 /* Style for all placeholder elements */
 .container-lg {
@@ -432,7 +552,11 @@ font-size: large;
  
    text-decoration: none;
  
+<<<<<<< HEAD
 
+=======
+   -webkit-backdrop-filter: blur(4.5px);
+>>>>>>> 7f9324ccb0586c9cb3cd046dd0deb3512067cd24
    top: 80px;
   background-blend-mode: luminosity;
  

@@ -8,8 +8,12 @@
   },
   "author": "Victoria Joseph",
   "license": "ISC",
+<<<<<<< HEAD
   "keywords": [],
   "devDependencies": {
     "tailwindcss": "^3.4.14"
   }
+=======
+  "keywords": []
+>>>>>>> 7f9324ccb0586c9cb3cd046dd0deb3512067cd24
 }
