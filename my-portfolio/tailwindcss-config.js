@@ -6,7 +6,6 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     
   ],
-  
   theme: {
     extend: {
       darkMode: ['selector', '[data-mode="dark"]'],
