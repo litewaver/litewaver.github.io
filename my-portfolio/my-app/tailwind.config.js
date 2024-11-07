@@ -11,10 +11,10 @@ module.exports = {
       colors: {
         'bg-dark':'#03031e',
         'text-color': '#f0fbda',
-        
+        'textcolor1': 'text-emerald-100', 
     },
       fontFamily: {
-        'source-code-pro': ['"Source Code Pro"', 'monospace'],
+        'source-code-pro': ['"Source Code Pro"', 'monospace']
     },
       container: {
       padding: {
@@ -23,7 +23,9 @@ module.exports = {
         lg: '4rem',
         xl: '5rem',
         '2xl': '6rem',
+      
 
+        width
     },
   },
   plugins: [
