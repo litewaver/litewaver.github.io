@@ -22,8 +22,8 @@ A portfolio website showcasing web development skills, projects, and experience.
 ## Technologies
 - HTML/CSS
 - JavaScript
-- Bootstrap / React Bootstrap
-- SASS
+- Bootstrap (formerly)
+- Tailwind CSS
 - PHP
 
 ## Setup
