@@ -1,30 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 @config "./tailwindcss-config.js";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
   }
 }
 
 body {
-  color: "text-color";
-  background: var(--background);
-  font-family: sour;
+  background-color: #03031e;
+  font-family: "source-code-pro";
 }
 
 main {
-  background-color: #bg-dark;
+  background-color: #03031e;
+  font-family: "source-code-pro";
 }
+
+
+
+#about-content {
+
+
+  backdrop-blur-sm
+}
+
 
 @layer base {
   @font-face {
@@ -33,30 +38,5 @@ main {
     font-weight: 400;
     font-display: swap;
     src: url(/fonts/source-code-pro.woff2) format("woff2");
-  }
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
-
-/* Custom styles */
-@layer base {
-  body {
-    @apply bg-dark text-;
-    @apply;
-  }
-  h1 {
-    @apply text-2xl font-bold mb-4;
-  }
-}
-
-@layer components {
-  .btn {
-    @apply px-4 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600;
-  }
-}
-
-@layer utilities {
-  .text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
 }

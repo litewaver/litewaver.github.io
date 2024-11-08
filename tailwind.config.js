@@ -6,12 +6,12 @@ module.exports = {
     "./src/app/**/*.{html,js,}",],
   theme: {
     extend: {
-      darkMode: ['selector', '[data-mode="dark"]'],
 
+      backdropFilter: ['responsive'], 
       colors: {
-        'bg-dark':'#03031e',
-        'text-color': '#f0fbda',
-        'textcolor1': 'text-emerald-100', 
+        'bg-dark': '#03031e',
+
+
     },
       fontFamily: {
         'source-code-pro': ['"Source Code Pro"', 'monospace']
