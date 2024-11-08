@@ -93,12 +93,12 @@ ul li a::before {
   z-index: -1;
 }
 
-i:hover::before {
+ul li a:hover::before {
   transform: scale(1.1);
   box-shadow: 0 0 30px powderblue;
 }
 
-i:hover {
+p:hover {
   color: powderblue;
   box-shadow: 0 0 10px powderblue;
   text-shadow: 0 0 10px powderblue;
