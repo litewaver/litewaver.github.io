@@ -18,7 +18,7 @@ body {
 }
 
 main {
-  background-color: #03031e;
+  background-color: #07072c;
   font-family: "source-code-pro";
 }
 
@@ -102,4 +102,27 @@ p:hover {
   color: powderblue;
   box-shadow: 0 0 10px powderblue;
   text-shadow: 0 0 10px powderblue;
+}
+
+
+
+
+
+/* link hover effect*/
+
+
+a, i {
+  color:#adc8fc;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in-out;
+}
+
+a, i:hover {
+  color: #f8f6e8;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in-out;
 }
