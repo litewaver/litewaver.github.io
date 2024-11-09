@@ -45,27 +45,18 @@ main {
 
 
 body {
-  margin: 0;
-  padding: 0;
-  background:transparent;
+ 
+ 
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 
 ul li {
   list-style: none;
   margin: 0 15px;
 }
 
-ul li a {
+#special-link li a {
   position: relative; 
   display: block;
   width: 60px;
@@ -79,7 +70,7 @@ ul li a {
   transition: .5s;
 }
 
-ul li a::before {
+#special-link a::before {
   content: '';
   position: absolute;
   top: 0;
@@ -93,12 +84,12 @@ ul li a::before {
   z-index: -1;
 }
 
-ul li a:hover::before {
+#special-link a:hover::before {
   transform: scale(1.1);
   box-shadow: 0 0 30px powderblue;
 }
 
-p:hover {
+#special-link  p:hover {
   color: powderblue;
   box-shadow: 0 0 10px powderblue;
   text-shadow: 0 0 10px powderblue;
@@ -106,12 +97,16 @@ p:hover {
 
 
 
+#navbar {
+background-color: transparent ;
 
+
+}
 
 /* link hover effect*/
 
 
-a, i {
+ a, i {
   color:#adc8fc;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
@@ -119,10 +114,11 @@ a, i {
   transition: all 0.2s ease-in-out;
 }
 
-a, i:hover {
+footer a, i:hover {
   color: #f8f6e8;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in-out;
 }
+
