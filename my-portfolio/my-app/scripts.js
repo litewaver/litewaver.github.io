@@ -1,16 +1,8 @@
-const backToTopBtn = document.getElementById('backToTopBtn');
+import { createRoot } from 'react-dom/client';
 
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset > 100) {
-    backToTopBtn.classList.remove('hidden');
-  } else {
-    backToTopBtn.classList.add('hidden');
-  }
-});
+// Clear the existing HTML content
+document.body.innerHTML = '<div id="app"></div>';
 
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-
-element.addEventListener(event, function, useCapture);
+// Render your React component instead
+const root = createRoot(document.getElementById('app'));
+root.render(<h1>Hello, world</h1>);
