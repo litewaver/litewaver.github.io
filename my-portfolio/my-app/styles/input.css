@@ -22,14 +22,8 @@ main {
   font-family: "source-code-pro";
 }
 
-
-
 #about-content {
-
-
-  backdrop-blur-sm
 }
-
 
 @layer base {
   @font-face {
@@ -41,15 +35,8 @@ main {
   }
 }
 
-
-
-
 body {
- 
- 
 }
-
-
 
 ul li {
   list-style: none;
@@ -57,7 +44,7 @@ ul li {
 }
 
 #special-link li a {
-  position: relative; 
+  position: relative;
   display: block;
   width: 60px;
   height: 60px;
@@ -67,11 +54,11 @@ ul li {
   border-radius: 50%;
   font-size: 30px;
   color: #666;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 #special-link a::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -79,8 +66,8 @@ ul li {
   height: 100%;
   border-radius: 50%;
   background: powderblue;
-  transition: .5s;
-  transform: scale(.9);
+  transition: 0.5s;
+  transform: scale(0.9);
   z-index: -1;
 }
 
@@ -89,36 +76,32 @@ ul li {
   box-shadow: 0 0 30px powderblue;
 }
 
-#special-link  p:hover {
+#special-link p:hover {
   color: powderblue;
   box-shadow: 0 0 10px powderblue;
   text-shadow: 0 0 10px powderblue;
 }
 
-
-
 #navbar {
-background-color: transparent ;
-
-
+  background-color: transparent;
 }
 
 /* link hover effect*/
 
-
- a, i {
-  color:#adc8fc;
+a,
+i {
+  color: #adc8fc;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in-out;
 }
 
-footer a, i:hover {
+footer a,
+i:hover {
   color: #f8f6e8;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in-out;
 }
-

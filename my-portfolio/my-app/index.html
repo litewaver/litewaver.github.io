@@ -14,17 +14,22 @@
 <link href="./output.css" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 
-
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/@mui/base@5.0.0-beta.24/dist/bundle.umd.js"></script>
 
   </head>
 
-  <body class="bg-bg-dark ">
+  <body class="bg-bg-dark">
 
-<nav id="navigation">
-  <nav id="navbar sticky top-10 z-10 w-full  sticky top-0 z-50">
+
+
+
+<nav id="navigation " >
+  <nav id="navbar sticky top-10 z-10 w-full  sticky top-0 z-50 absolute inset-0 bg-white/20 backdrop-blur-sm hover:backdrop-blur-lg transition-all duration-300">
     <div class=" container p-8 max-w-3xl mx-auto px-4 flex justify-between items-center backdrop-filter backdrop-blur-sm bg-white/30  bg-opacity-30 relative z-10 ">
         <ul class="text-2xl items-center justify-between">
-            <li><a href="#" class="text-white hover:text-gray-300">HQ</a></li>
+            <li><a href="#" class="text-white hover:text-gray-300 hover:underline">HQ</a></li>
             <li><a href="#" class="text-white hover:text-gray-300">About</a></li>
             <li><a href="#" class="text-white hover:text-gray-300">Contact</a></li>
           </ul>
@@ -33,20 +38,26 @@
 </nav>
 
 
-
-<main class="  font-source-code-pro grid gap-3 grid-cols-2 grid-rows-2 ">
-
-
+<header class="col-span-full bg-gray-100 p-6">
+<h1>Vic Joseph | Full Stack Developer</h1>
 
 
-  <div class="bg-white/20 backdrop-blur-lg rounded-md p-4">
-  <p class=" absolute inset-x-0 top-0 h-16 text-balance m-8 text-emerald-100 text-2xl  hover:ring-4 ring-pink-500 ring-offset-2">
+</header>
+
+<main class="  bg-bg-dark grid gap-3 grid-cols-2 grid-rows-2 ">
+
+
+
+
+  <div class="shadow-lg bg-black/20 backdrop-blur-sm p-4 border border-white/20 rounded-md">
+
+    <h2 class="text-balance flex   m-8 text-emerald-100 text-2xl"></h2>
     I'm a web developer with 2 years of experience building web applications.
     <br> I specialize in full-stack development building with JavaScript web & mobile applications
     <br> 
     <br>
 
-    <button class=" px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
+    <button class=" px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-700 focus:outline focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
       <a href="/my-portfolio/my-app/assets/Experienced Web Developer  (2).pdf" target="_blank">
         my resume
       </a>
@@ -62,22 +73,22 @@
 </div>
   
 
-<div class="container">
-<h1 class="text-balance flex border border-slate-300 hover:border-slate-400  m-8 text-emerald-100 text-2xl">Victoria Joseph | Full Stack Developer
+<div class="shadow-lg bg-black/20 backdrop-blur-sm backdrop-filter border border-white/20 rounded-md p-4">
+">
   <p>As of 11/7/24 I'm modifying my friend's UI & UX by adding hover effects and CSS animations to his portfolio site.
     <br> As of 11/8/24 I'm working on creating:
     <br> a RESTful API using ASP.NET Core
     <br> an ecommerce store with Shopify Liquid
     <br> building an application for iOS & Android with Kotlin or React Native</br>
   <div class="grow-0 h-14 profile-image w-24 flex-auto shrink relative ">
-    </p>
+  </h2>
     
     
   </div>
 </h1>
 </div>
 
-<ul class=" text-xl font-semibold mb-3 flex text-indigo-300 bottom-0 place-items-stretch ms-8   w-max grow  transition duration-300  list-disc list-inside mb-4 hover:space-x-8 w-maxflex  hover:grow-1 hover:space-x-8">
+<ul class="  font-semibold mb-3 flex text-indigo-300 bottom-0 place-items-stretch ms-8   w-max grow  transition duration-300  list-disc list-inside mb-4 hover:space-x-8 w-maxflex  hover:grow-1 hover:space-x-8">
   <i class="fa-brands fa-react fa-2xl "></i>
   <i class="fa-brands fa-js fa-2xl"></i>
   <i class="fa-brands fa-html5 fa-2xl"></i>
