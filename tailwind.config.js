@@ -1,44 +1,34 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [ 
+  content: [
     "./src/index.html**/*.{html,js}",
     "./src/components/**/*.{html,js,}",
-    "./src/app/**/*.{html,js,}",],
+    "./src/app/**/*.{html,js,}",
+  ],
   theme: {
     extend: {
-
-      backdropFilter: ['responsive'], 
+      backdropFilter: ["responsive"],
       colors: {
-        'bg-dark': '#03031e',
-
-
-    },
+        "bg-dark": "#03031e",
+      },
       fontFamily: {
-        'source-code-pro': ['"Source Code Pro"', 'monospace']
-    },
+        "source-code-pro": ['"Source Code Pro"', "monospace"],
+      },
       container: {
-      padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
-      
+        padding: {
+          DEFAULT: "1rem",
+          sm: "2rem",
+          lg: "4rem",
+          xl: "5rem",
+          "2xl": "6rem",
 
-        width
+          width,
+        },
+      },
+      plugins: [
+        require("@tailwindcss/forms"),
+        require("@tailwindcss/typography"),
+      ],
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    
-
-  ],
-}
-
-
-},
-
-
-}
-
+};
