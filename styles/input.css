@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@config "./tailwindcss-config.js";
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+:root {
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}
+
+body {
+}
+
+main {
+  background-color: #050125;
+  font-family: "Geist Mono", monospace;
+}
+
+#about-content {
+}
+
+@layer base {
+  @font-face {
+    font-family: "source-code-pro";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/source-code-pro.woff2) format("woff2");
+  }
+}
+
+body {
+}
+
+ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+#special-link li a {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: transparent;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #666;
+  transition: 0.5s;
+}
+
+#special-link a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: powderblue;
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+#special-link a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px powderblue;
+}
+
+#special-link p:hover {
+  color: powderblue;
+  box-shadow: 0 0 10px powderblue;
+  text-shadow: 0 0 10px powderblue;
+}
+
+#navbar {
+  background-color: transparent;
+}
+
+/* link hover effect*/
+
+a,
+i {
+  color: #adc8fc;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in-out;
+}
+
+footer a,
+i:hover {
+  color: #f8f6e8;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in-out;
+}
