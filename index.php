@@ -157,6 +157,7 @@ if you'd like to work with me, feel free to connect via the social links!
 
 <!--fixed-->
 <div class=" col-span-2 max-w-sm text-2xl shadow-lg bg-black/20 backdrop-blur-sm border border-white/20 rounded-md p-4">
+  <img src=" width="60px">
   <p class="text-emerald-200 hover:text-indigo-200"> Collaborators & contributors:
     <br>
     <br>
@@ -208,6 +209,10 @@ if you'd like to work with me, feel free to connect via the social links!
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6vp2ckYbT8iDEnPrbe76pV?utm_source=generator" width="600" height="200  " frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" rel="noopener noreferrer"></iframe>
 </div>
 </div>
+
+
+<?php echo "Next project countdown " . date("Y/m/d") . "<br>"; ?>
+
 
 
 <div class="container mx-auto flex flex-col min-h-screen ">
