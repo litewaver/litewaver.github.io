@@ -26,20 +26,26 @@
 
 
 
-<div class=" ">   <!--wrapping container-->
-  <nav id="navbar sticky top-10 z-10 w-full mt-10"></nav>
-    <div class="container  items-center justify-between mx-auto text-slate-800">
-      <ul class="text-2xl items-center justify-between">
-        <li><a href="#" class=" hover:text-gray-300 hover:underline">HQ</a></li>
-        <li><a href="#" class=" hover:text-gray-300">About</a></li>
-        <li><a href="#" class=" hover:text-gray-300">Contact</a></li>
-      </ul>
+  <!--wrapping container-->
+
+
+  <nav class=" w-full m-6 py-2 h-10 md:h-20  lg:py-1 bg-opacity-10 backdrop-filter backdrop-blur-sm fixed w-full z-20 top-0 start-0 border-b border-gray-100 dark:border-gray-600">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+      <div class="container  items-center justify-between mx-auto ">
+        <ul class="text-2xl text-slate-800 items-center justify-between">
+          <li><a href="#" class=" hover:text-gray-300 hover:underline">HQ</a></li>
+          <li><a href="#" class=" hover:text-gray-300">About</a></li>
+          <li><a href="#" class=" hover:text-gray-300">Contact</a></li>
+        </ul>
   </nav>
 </div>
 
 
-
 <main class="  grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-3   ">
+
+
+
+
 
 <div class=" ">
   <h1 class="w-full m-8 md:w-1/2 p-4 lg:hover:text-gray-700  sm:text-indigo-300 text-4xl  md:text-4xl sm:text-5xl    transition duration-300  ">
@@ -106,19 +112,16 @@
 
 
 
-
 <div class=" container  col-span-2  max-w-md mx-auto text-center sm:text-left w-maxflex  shrink p-4 text-indigo-400">
-  <p class="bg-black/20 backdrop-blur-sm backdrop-filter border border-white/20 rounded-xl p-6"> About me ~ my raison d'être <br> <img src="/assets/sticker-3d-sticker-by-linefriends.gif" width="60px">
+  <p  class="bg-black/20 backdrop-blur-sm backdrop-filter border border-white/20 rounded-xl p-6"> About me ~ my raison d'être <br> <img src="/assets/sticker-3d-sticker-by-linefriends.gif" width="60px">
   my mom instilled my sense of purpose by being a business person and teaching me 
   values of personal responsibility, pursuit, intelligence, grit, and always aiming for the best. 
   I'm a naturally curious individual. While I'm not yet a cyborg, I'm getting there and it's never felt 
-  better to be part of the best community on Earth. Tech fascinates, inspires, and helps me learn endlessly. 
-  I'm on a quest to discover who I am, and through my career... It's led me to priceless experiences, friendships, and 
+  better to be part of the best community on Earth. I'm on a quest to discover who I am, and through my career... It's led me to priceless experiences, friendships, and 
   lasting moments that are more than nostalgic even as a pre-intern!
   In my spare time I love playing guitar, bass, creating art, and continously improving myself as an agent of the new world
+  </p> 
 
-
-  </p>
 
 <div class="col">
 <form class="max-w-md mx-auto mt-8">
@@ -180,12 +183,12 @@ if you'd like to work with me, feel free to connect via the social links!
 
 
   <div class="flex flex-col">
-    <div class="basis-1/2 p-2 transform hover:scale-105 transition-transform duration-300 ease-in-out">
+    <div class="basis-1/2 p-2 ">
       <p class="text-2xl hover:text-gray-400 text-indigo-300 transform hover:scale-105 transition-transform duration-300 ease-in-out ">Spotify's AI DJ has helped me make many a curated vibe list</p>
       <iframe style="border-radius:12px " src="https://open.spotify.com/embed/playlist/7uV6LTGb4t8ZgPHiYu5jtN?utm_source=generator" width="400" height="260" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" rel="noopener noreferrer"></iframe>
 
 
-  <div class="basis-1/2 p-2 transform hover:scale-105 transition-transform duration-300 ease-in-out ">
+  <div class="basis-1/2 p-2 ">
     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6vp2ckYbT8iDEnPrbe76pV?utm_source=generator" width="400" height="200  " frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" rel="noopener noreferrer"></iframe>
   </div>
 </div>
@@ -194,9 +197,10 @@ if you'd like to work with me, feel free to connect via the social links!
 <?php echo "Next project countdown " . date("Y/m/d") . "<br>"; ?>
 
 
-<div class="container mx-auto flex flex-col min-h-screen ">
-  <footer class="sticky bottom-10 bg-gray-800 bg-opacity-20 text-emerald-100 p-4 backdrop-filter backdrop-blur-md">
-    <ul class=" place-content-center flex flex-wrap justify-center space-x-12 place-items-stretch transform hover:scale-105 transition-transform duration-300 ease-in-out">
+
+  <footer class="sticky w-full bottom-10 bg-gray-800 bg-opacity-20 text-emerald-100 p-4 ">
+    <div class="  space-x-4 ">
+    <ul class=" place-content-center flex flex-wrap justify-center  place-items-stretch transform hover:scale-105 transition-transform duration-300 ease-in-out">
      <li><a href="#" class="text-emerald-100 text-2xl hover:text-indigo-400">HQ</a></li>
       <li><a data-mdb-ripple-init class="btn btn-outline btn-floating m-3" href="https://www.linkedin.com/in/victoria-joseph-in/" id="special-link" target="_blank" role="button"
         ><i class="fab fa-linkedin fa-2x"></i></a></li>
@@ -212,9 +216,10 @@ if you'd like to work with me, feel free to connect via the social links!
     <div class=" text-emerald-200 text-center unselectable sm:font-source-code-pro transform hover:scale-105 transition-transform duration-300 ease-in-out">
       <p>&copy; Victoria Joseph 2024
       <p>Made with<span style="color: #22080c;"> ❤</span> by vyktorya</p>
-      </footer>
     </div>
-  </div>
+      </footer>
+
+
 
 
 
