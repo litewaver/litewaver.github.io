@@ -68,3 +68,19 @@ cards.forEach(card => {
     card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
   });
 });
+
+//gsap animate
+let nav = document.querySelector('.nav')
+
+let tween = gsap.to(".flair", {
+  duration: 2, 
+  x: () => nav.offsetWidth, // animate by the px width of the nav
+  xPercent: -100, // offset by the width of the box
+  rotation: 360, 
+  ease: "none", 
+  paused: true
+});
+
+
+//button rotate
+gsap.to(".button", { rotation: 27, x: 100, duration: 1 });
