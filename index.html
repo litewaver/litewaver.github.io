@@ -41,7 +41,7 @@
 </div>
 
 
-<main class="  grid gap-2 grid-cols-1 sm:grid-cols-3 md:flex-row   ">
+<main class="  flex justify-center grid gap-2 grid-cols-1 sm:grid-cols-3 md:flex-row   ">
 
 <div class="row p-7">
   <h1 class=" w-full m-2 md:w-1/2 p-4 lg:hover:text-gray-700  sm:text-indigo-300  md:text-4xl sm:text-5xl    transition duration-300  ">
@@ -53,9 +53,9 @@
 <div class=" col-span-1 grow-0 max-w-md mx-auto  h-screen p-4 sm:p-6 md:p-8 lg:max-h-md   ">
     <h2 class="   basis-1/2 text-center sm:text-left text-balance flex  text-emerald-100 text-2xl">
       <div class="   p-7 hover:bg-zinc-600 max-w-md  shadow-lg bg-black/20 backdrop-blur-sm p-4 border border-white/20 rounded-md">
-      <p class="text-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out">I'm a web developer and designer. Building web applications and learning app development is the best way for me to express my personal mantra and creative ethos to share with you
+      <p class="text-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out">I'm a web developer and designer. Building web applications and learning app development is the best way for me to express my personal mantra and creative ethos to share with you.
       <br>
-      <br> I specialize in full-stack development building web & mobile applications with JavaScript. I also plan to create coding content for tiktok and youtube. 
+      <br> I specialize in full-stack development building web & mobile applications with JS and TypeScript.
       <br> </p>
       <br>
 
@@ -81,7 +81,8 @@
  <div class="container-md">
  
  <p class="text-lg transform hover:scale-105 transition-transform duration-300 ease-in-out ">
-    11/24/24 ~ building a multi-step KYC form application with React, deployed on Vercel.
+    06/07/2024 ~ building a multi-step KYC form application with React, deployed on Vercel.
+    ~ building a php contact form and ren.py game
 
   </p>
 </div>  
@@ -97,10 +98,8 @@
 
 
 
-        <p class="text-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out ">As of 11/13/24 I'm working on creating:
-          <br> a RESTful API using ASP.NET Core
-          <br> an ecommerce 
-          <br> building an application for iOS & Android with Kotlin or React Native</br>
+        <p class="text-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out ">As of 06/07/2025 I'm working on creating:
+
         </p>
 
   </div>
@@ -111,20 +110,10 @@
 
 
 
-<!--
-<div class=" container  col-span-2  max-w-md mx-auto text-center sm:text-left w-maxflex  shrink p-4 text-indigo-400">
-  <p  class="bg-black/20 backdrop-blur-sm backdrop-filter border border-white/20 rounded-xl p-6"> About me ~ my raison d'être <br> <img src="/assets/sticker-3d-sticker-by-linefriends.gif" width="60px">
-  my mom instilled my sense of purpose by being a business person and teaching me 
-  values of personal responsibility, pursuit, intelligence, grit, and always aiming for the best. 
-  I'm a naturally curious individual. While I'm not yet a cyborg, I'm getting there and it's never felt 
-  better to be part of the best community on Earth. I'm on a quest to discover who I am, and through my career... It's led me to priceless experiences, friendships, and 
-  lasting moments that are more than nostalgic even as a pre-intern!
-  In my spare time I love playing guitar, bass, creating art, and continously improving myself as an agent of the new world
-  </p> 
--->
 
 <div class="col">
-<form class="max-w-md mx-auto mt-8">
+  <form class="max-w-md mx-auto mt-8" method="POST" action="form.php" id="contact-form">
+
   <div class="mb-4">
     <label for="name" class="block text-gray-500 font-bold mb-2">Name</label>
     <input type="text" id="name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
@@ -138,22 +127,18 @@
     <textarea id="message" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
   </div>
       <a href="./assets/Experienced Web Developer  (2).pdf" target="_blank" rel="noopener noreferrer">
-  <button type="submit" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-opacity-80   transform hover:scale-105 transition-transform duration-300 ease-in-out  px-4 py-2 bg-950 border border-white rounded-lg shadow-md hover:bg-violet-300 focus:outline focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">Send Message</button>
+  
+        <p>
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">I accept the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</label>
+      </p>
+
+      <button type="submit" value="Send" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-opacity-80   transform hover:scale-105 transition-transform duration-300 ease-in-out  px-4 py-2 bg-950 border border-white rounded-lg shadow-md hover:bg-violet-300 focus:outline focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">Send Message</button>
 </form>
 
 
 
-<!--add repo link-->
 
-<!--
-<div class="container max-w-md mx-auto text-center sm:text-left hover:bg-zinc-600">
-  <section class="text-2xl text-indigo-200 font-bold">
-about me: <br>
-if you'd like to support me directly pls visit my <a href="http://patreon.com">patreon</a>
-if you'd like to work with me, feel free to connect via the social links!
-  </section>
-</div>
--->
 
 
 
@@ -189,18 +174,16 @@ if you'd like to work with me, feel free to connect via the social links!
 
   <div class="flex flex-col md:flex-row gap-6">
     <div class="basis-1/2 p-2 ">
-      <p class="text-2xl hover:text-gray-400 text-indigo-300 transform hover:scale-105 transition-transform duration-300 ease-in-out ">Spotify's AI DJ has helped me make many a curated vibe list</p>
-      <iframe style="border-radius:12px " src="https://open.spotify.com/embed/playlist/7uV6LTGb4t8ZgPHiYu5jtN?utm_source=generator" width="400" height="260" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" rel="noopener noreferrer"></iframe>
+     
 
 
   <div class="basis-1/2 p-2 ">
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6vp2ckYbT8iDEnPrbe76pV?utm_source=generator" width="400" height="200  " frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" rel="noopener noreferrer"></iframe>
   </div>
 
 
 
 <div class="col-md-4 col-"
-visit my DIY brand src="https://www.mercari.com/u/mementomolly/" target="_blank"
+
 
 
 <div class="row  flex-wrap fixed bottom-0 sticky bottom-10">
@@ -218,9 +201,9 @@ visit my DIY brand src="https://www.mercari.com/u/mementomolly/" target="_blank"
   </ul>
   </div>
 
-  <footer class=" bg-gray-800 bg-opacity-20 text-emerald-100 p-4 ">
+  <footer class="flex justify-center bg-gray-800 bg-opacity-20 text-emerald-100 p-4 ">
     
-    <ul class=" row place-content-center  justify-center  place-items-stretch transform hover:scale-105 transition-transform duration-300 ease-in-out">
+    <ul class="   flex justify-center place-items-stretch transform hover:scale-105 transition-transform duration-300 ease-in-out">
      <li><a href="#" class="text-emerald-100 text-2xl hover:text-indigo-400">HQ</a></li>
       <li><a data-mdb-ripple-init class="btn btn-outline btn-floating m-3" href="https://www.linkedin.com/in/victoria-joseph-in/" id="special-link" target="_blank" role="button"
         ><i class="fab fa-linkedin fa-2x"></i></a></li>
@@ -232,12 +215,16 @@ visit my DIY brand src="https://www.mercari.com/u/mementomolly/" target="_blank"
         ><i class="fab fa-instagram fa-2x"></i></a></li>
       <li><a data-mdb-ripple-init class="btn btn-outline btn-floating m-3" href="https://www.tiktok.com/@vyktoryawaver" id="special-link" target="_blank" role="button"
         ><i class="fab fa-tiktok fa-2x"></i></a></li> 
+        <li><a data-mdb-ripple-init class="btn btn-outline btn-floating m-3" href="https://open.spotify.com/user/31vgak2t645iy7cd6gbac6jfq3eq?si=ccfea29067074644" id="special-link" target="_blank" role="button"
+          ><i class="fab fa-spotify fa-2x"></i></a></li> 
+
+
     </ul>
 
     <!-- Copyright -->
-    <div class=" text-emerald-200 text-center unselectable sm:font-source-code-pro transform hover:scale-105 transition-transform duration-300 ease-in-out">
-      <p>&copy; Victoria Joseph 2024
-      <p>Made with<span style="color: #22080c;"> ❤</span> by vyktorya</p>
+    <div class=" text-emerald-100 text-center unselectable sm:font-source-code-pro transform hover:scale-105 transition-transform duration-300 ease-in-out">
+      <p>&copy; Victoria Joseph 2025
+      <p>Made with<span style="color: #c25f6e;"> ❤</span> by vyktorya</p>
     </div>
       </footer>
 
@@ -266,6 +253,8 @@ visit my DIY brand src="https://www.mercari.com/u/mementomolly/" target="_blank"
     <script type="text/javascript" src="./scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+
     </div>
 </body>
 </html>
