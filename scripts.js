@@ -87,7 +87,7 @@ gsap.to(".button", { rotation: 27, x: 100, duration: 1 });
 
 
 
-<script>
+
    const constraints = {
        name: {
            presence: { allowEmpty: false }
@@ -110,16 +110,46 @@ gsap.to(".button", { rotation: 27, x: 100, duration: 1 });
          message: form.elements.message.value
      };
 
-     const errors = validate(formValues, constraints);
 
-     if (errors) {
-       event.preventDefault();
-       const errorMessage = Object
-           .values(errors)
-           .map(function (fieldValues) { return fieldValues.join(', ')})
-           .join("\n");
 
-       alert(errorMessage);
-     }
-   }, false);
-</script>
+     //back to top button 
+const topbtn = document.getElementById('topbtn') as HTMLButtonElement;
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) {
+    topbtn.style.display = 'block';
+  } else {
+    topbtn.style.display = 'none';
+  }
+});
+
+topbtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+
+//toggle button 1
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("lite-mode");
+}
+
+
+
+const button = document.createElement('button')
+button.textContent = 'lite mode';
+button.id = "liteMode";
+
+
+
+
+//toggle button 2
+const toggleButton = document.getElementById('liteMode');
+const body = document.body;
+
+toggleButton.addEventListener('click', () => {
+  body.classList.toggle('liteMode');
+});

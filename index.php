@@ -20,10 +20,10 @@
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/@mui/base@5.0.0-beta.24/dist/bundle.umd.js"></script>
 
+  <script src="/litewaver.github.io/scripts.js"></script>
 </head>
 
 <body class="min-h-screen ">
-
 
 
   <!--wrapping container-->
@@ -40,11 +40,20 @@
   </nav>
 </div>
 
+<?php
+echo .date()
+
+?>
+
+
+<?php
+echo "Hello, PHP in VS Code!";
+?>
 
 <main class="  grid gap-2 grid-cols-1 sm:grid-cols-3 md:flex-row   ">
 
 <div class="row p-7">
-  <h1 class=" w-full m-2 md:w-1/2 p-4 lg:hover:text-gray-700  sm:text-indigo-300  md:text-4xl sm:text-5xl    transition duration-300  ">
+  <h1 class=" w-full m-2 md:w-1/2 p-4 lg:hover:text-gray-700  sm:text-pink-100  md:text-4xl sm:text-5xl    transition duration-300  ">
     Vic Joseph | Full Stack Developer 
   </h1>
 
@@ -55,16 +64,18 @@
       <div class="   p-7 hover:bg-zinc-600 max-w-md  shadow-lg bg-black/20 backdrop-blur-sm p-4 border border-white/20 rounded-md">
       <p class="text-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out">I'm a web developer and designer. Building web applications and learning app development is the best way for me to express my personal mantra and creative ethos to share with you.
       <br>
-      <br> I specialize in full-stack development building web & mobile applications with JS and TypeScript.
+      <br> For 3 years I've specialized in full-stack development <br>building web & mobile applications with JS and TypeScript.
       <br> </p>
       <br>
 
     <button class="transform hover:scale-105 transition-transform duration-300 ease-in-out  px-4 py-2 bg-950 border border-white rounded-lg shadow-md hover:bg-violet-300 focus:outline focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
-      <a href="./assets/Experienced Web Developer  (2).pdf" target="_blank" rel="noopener noreferrer">
+      <a href="assets/Experienced Web Developer  (4).pdf" target="_blank" rel="noopener noreferrer">
         my resume
       </a>
     </button>
     
+
+
 
 
 
@@ -76,17 +87,18 @@
 
 </div>
 
-<div class="   w-40 h-60 hover:bg-zinc-600  text-center sm:text-left text-emerald-100 text-2xl hover:text-emerald-200 bg-black/20 backdrop-blur-sm backdrop-filter border border-white/20 rounded-md p-4">
+<div class="   w-60 h-auto hover:bg-zinc-600  text-center sm:text-left text-emerald-100 text-2xl hover:text-emerald-200 bg-black/20 backdrop-blur-sm backdrop-filter border border-white/20 rounded-md p-4">
  
- <div class="container-md">
+ <div class="container-lg">
  
  <p class="text-lg transform hover:scale-105 transition-transform duration-300 ease-in-out ">
     06/07/2024 ~ building a multi-step KYC form application with React, deployed on Vercel.
     ~ building a php contact form and ren.py game
 
   </p>
+  </div>
 </div>  
-</div>
+
 
 <div class="col-span-1  hover:bg-zinc-600 max-w-md mx-auto text-center sm:text-left text-emerald-100 text-2xl hover:text-emerald-200 bg-black/20 backdrop-blur-sm backdrop-filter border border-white/20 rounded-md p-4">
   <p class="text-2xl  transform hover:scale-105 transition-transform duration-300 ease-in-out ">current misson: modifying my friend's UI & UX by adding hover effects and CSS animations to his portfolio site.
@@ -103,6 +115,7 @@
         </p>
 
   </div>
+
 </div>
 </div>
 
@@ -141,9 +154,10 @@
 
 <div class="basis-1/2 p-2 ">
   <p >view my instagram for full posts & more:
-  <img src="./assets/spotify ai-review-1-victoria-joseph.jpg" alt="post1" class=" animate w-200 h-auto  transform hover:scale-105  md:w-50 md:h-auto sm:w-30 sm:h-30   rounded-lg shadow-lg tilt-card m-6 transition-transform duration-300 ease-out">
+    <a href="https://instagram.com/maagnolianroot" target="_blank" rel="noopener noreferrer">
+      <img src="./assets/spotify ai-review-1-victoria-joseph.jpg" alt="post1" class=" animate w-200 h-auto  transform hover:scale-105  md:w-50 md:h-auto sm:w-30 sm:h-30   rounded-lg shadow-lg tilt-card m-6 transition-transform duration-300 ease-out">
   <div class="flex flex-wrap text-emerald-50">
-  <a href="https://instagram.com/maagnolianroot" target="_blank" rel="noopener noreferrer"></a></p>
+  </a></p>
 </div>
 
 
@@ -170,19 +184,23 @@
 
 
 
-  
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 
 
+<div><button id="liteMode">lite mode
+  <i class="fa-sun "></i>
+</button>
+</div>
+
+
+
+  <div class=" col-span-3 max-w-md text-lg shadow-lg bg-black/20 backdrop-blur-sm border border-white/30 rounded-md p-7 m-6">
+  <a href="https://github.com/litewaver/litewaver.github.io/blob/c8e74df44766b46895231e7ec5ccf734f62f3fbe/assets/figma-mockup-portfolio.png" target="_blank">
+    <img src="./assets/figma-mockup-portfolio.png "alt="figma-mockup" class="animate w-200 h-auto  transform hover:scale-105  md:w-50 md:h-auto sm:w-30 sm:h-30   rounded-lg shadow-lg tilt-card m-6 transition-transform duration-300 ease-out">
+  </a>
+    <p>Figma Portfolio mockup</p>
   </div>
 
-
-
-
-
-
-<div class="col-md-4 col-"
 
 
 
@@ -200,6 +218,14 @@
   <li><i class="fa-brands fa-ubuntu fa-2xl"></i></li>
   </ul>
   </div>
+
+
+
+
+
+
+
+
 
   <footer class="flex justify-center bg-gray-800 bg-opacity-20 text-emerald-100 p-4 ">
     
@@ -223,18 +249,23 @@
 
     <!-- Copyright -->
     <div class=" text-emerald-100 text-center unselectable sm:font-source-code-pro transform hover:scale-105 transition-transform duration-300 ease-in-out">
-      <p>&copy; Victoria Joseph 2025
+      <p>&copy; Victoria Joseph <?php echo date("Y")
       <p>Made with<span style="color: #c25f6e;"> ❤</span> by vyktorya</p>
     </div>
+
+    <ul>
+  <button id="topbtn" title="back to top">
+    <i class="fa-solid fa-caret-up"></i>
+  </button>
+
+
+
+   </ul>
       </footer>
 
 
 
 
-
-  <button id="topbtn" title="back to top">
-    <i class="fa-solid fa-caret-up"></i>
-  </button>
 
 
 
@@ -249,7 +280,7 @@
     </div>
 
 
-
+    
     <script type="text/javascript" src="./scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>

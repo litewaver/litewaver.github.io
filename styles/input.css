@@ -14,7 +14,16 @@
 }
 
 body {
+
+
+
 }
+
+.light-mode {
+  background-color: bisque;
+  color:#050125;
+}
+
 
 main {
   background-color: #050125;
@@ -121,4 +130,17 @@ i:hover {
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in-out;
+}
+
+
+#topbtn {
+position: fixed;
+bottom: 50px;
+right: 60px;
+padding: 10px 15px;
+z-index: 100;
+cursor: pointer;
+color: bisque;
+border-radius: 5px;
+
 }
