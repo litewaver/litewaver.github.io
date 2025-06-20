@@ -50,19 +50,23 @@ echo .date()
 echo "Hello, PHP in VS Code!";
 ?>
 
-<main class="  grid gap-2 grid-cols-1 sm:grid-cols-3 md:flex-row   ">
+<main class="  grid gap-3 grid-cols-2 sm:grid-cols-3 md:flex-row  grid-rows-3 gap-4 ">
 
-<div class="row p-7">
-  <h1 class=" w-full m-2 md:w-1/2 p-4 lg:hover:text-gray-700  sm:text-pink-100  md:text-4xl sm:text-5xl    transition duration-300  ">
+<div class="row p-7 col-span-3">
+  <h1 class=" col-span-2 w-full m-2 md:w-1/2 p-4 lg:hover:text-gray-700  sm:text-pink-100  md:text-4xl sm:text-5xl    transition duration-300  ">
     Vic Joseph | Full Stack Developer 
   </h1>
 
+<h2 class="row-span-3">
+    <img src="./assets/image2.jpg" alt="Victoria Joseph" class=" animate w-90 h-auto  transform hover:scale-105  md:w-60 md:h-50 sm:w-30 sm:h-30   rounded-lg shadow-lg tilt-card m-6 transition-transform duration-300 ease-out">
+    <div class="flex flex-wrap">
 
+</h2>
 
-<div class=" col-span-1 grow-0 max-w-md mx-auto  h-screen p-4 sm:p-6 md:p-8 lg:max-h-md   ">
-    <h2 class="   basis-1/2 text-center sm:text-left text-balance flex  text-emerald-100 text-2xl">
-      <div class="   p-7 hover:bg-zinc-600 max-w-md  shadow-lg bg-black/20 backdrop-blur-sm p-4 border border-white/20 rounded-md">
-      <p class="text-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out">I'm a web developer and designer. Building web applications and learning app development is the best way for me to express my personal mantra and creative ethos to share with you.
+<div class="max-w-full col-span-2 grow-0 max-w-md mx-auto  h-screen p-4 sm:p-6 md:p-8 lg:max-h-md   ">
+    <h3 class=" max-w-full col-span-2  basis-1/2 text-center sm:text-left text-balance flex  text-emerald-100 text-2xl">
+      <div class="  max-w-full p-2 hover:bg-zinc-600 max-w-md  shadow-lg bg-black/20 backdrop-blur-sm p-4 border border-white/20 rounded-md">
+      <p class="max-w-full col-span-2 text-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out">I'm a web developer and designer. Building web applications and learning app development is the best way for me to express my personal mantra and creative ethos to share with you.
       <br>
       <br> For 3 years I've specialized in full-stack development <br>building web & mobile applications with JS and TypeScript.
       <br> </p>
@@ -75,10 +79,17 @@ echo "Hello, PHP in VS Code!";
     </button>
     
 
+</h3>
 
 
 
-
+<div class="row-span-2"
+<div class=" max-w-full text-lg shadow-lg bg-black/20 backdrop-blur-sm border border-white/30 rounded-md p-7 m-6">
+      <a href="https://github.com/litewaver/litewaver.github.io/blob/c8e74df44766b46895231e7ec5ccf734f62f3fbe/assets/figma-mockup-portfolio.png" target="_blank">
+        <img src="./assets/figma-mockup-portfolio.png "alt="figma-mockup" class="animate w-200 h-auto  transform hover:scale-105  md:w-50 md:h-auto sm:w-30 sm:h-30   rounded-lg shadow-lg tilt-card m-6 transition-transform duration-300 ease-out">
+      </a>
+        <p class="text-fuchsia-300">Figma Portfolio mockup</p>
+      </div>
 
     
 
@@ -89,24 +100,22 @@ echo "Hello, PHP in VS Code!";
 
 <div class="   w-60 h-auto hover:bg-zinc-600  text-center sm:text-left text-emerald-100 text-2xl hover:text-emerald-200 bg-black/20 backdrop-blur-sm backdrop-filter border border-white/20 rounded-md p-4">
  
- <div class="container-lg">
+  <div class="container-lg">
+  
+  <p class="text-lg transform hover:scale-105 transition-transform duration-300 ease-in-out ">
+     06/07/2024 ~ building a multi-step KYC form application with React, deployed on Vercel.
+     ~ building a php contact form and ren.py game
  
- <p class="text-lg transform hover:scale-105 transition-transform duration-300 ease-in-out ">
-    06/07/2024 ~ building a multi-step KYC form application with React, deployed on Vercel.
-    ~ building a php contact form and ren.py game
-
-  </p>
-  </div>
+   </p>
+   </div>
 </div>  
 
 
-<div class="col-span-1  hover:bg-zinc-600 max-w-md mx-auto text-center sm:text-left text-emerald-100 text-2xl hover:text-emerald-200 bg-black/20 backdrop-blur-sm backdrop-filter border border-white/20 rounded-md p-4">
+<div class=" hover:bg-zinc-600 max-w-md mx-auto text-center sm:text-left text-emerald-100 text-2xl hover:text-emerald-200 bg-black/20 backdrop-blur-sm backdrop-filter border border-white/20 rounded-md p-4">
   <p class="text-2xl  transform hover:scale-105 transition-transform duration-300 ease-in-out ">current misson: modifying my friend's UI & UX by adding hover effects and CSS animations to his portfolio site.
   </p>
  
 
-  <img src="./assets/image2.jpg" alt="Victoria Joseph" class=" animate w-60 h-auto  transform hover:scale-105  md:w-40 md:h-50 sm:w-30 sm:h-30   rounded-lg shadow-lg tilt-card m-6 transition-transform duration-300 ease-out">
-    <div class="flex flex-wrap">
 
 
 
@@ -121,10 +130,6 @@ echo "Hello, PHP in VS Code!";
 
 
 
-
-
-
-<div class="col">
   <form class="max-w-md mx-auto mt-8" method="POST" action="form.php" id="contact-form">
 
   <div class="mb-4">
@@ -183,7 +188,8 @@ echo "Hello, PHP in VS Code!";
 </div>
 
 
-
+<div id="product-container" class="text-stone-400 animate flex  overflow-hidden transform hover:scale-105  md:w-50 md:h-50  rounded-lg shadow-lg tilt-card m-6 transition-transform duration-300 ease-out">
+    
 
 
 
@@ -194,16 +200,8 @@ echo "Hello, PHP in VS Code!";
 
 
 
-  <div class=" col-span-3 max-w-md text-lg shadow-lg bg-black/20 backdrop-blur-sm border border-white/30 rounded-md p-7 m-6">
-  <a href="https://github.com/litewaver/litewaver.github.io/blob/c8e74df44766b46895231e7ec5ccf734f62f3fbe/assets/figma-mockup-portfolio.png" target="_blank">
-    <img src="./assets/figma-mockup-portfolio.png "alt="figma-mockup" class="animate w-200 h-auto  transform hover:scale-105  md:w-50 md:h-auto sm:w-30 sm:h-30   rounded-lg shadow-lg tilt-card m-6 transition-transform duration-300 ease-out">
-  </a>
-    <p>Figma Portfolio mockup</p>
-  </div>
 
 
-  <div id="product-container" class="text-stone-400 animate flex  overflow-hidden transform hover:scale-105  md:w-50 md:h-50  rounded-lg shadow-lg tilt-card m-6 transition-transform duration-300 ease-out">
-    
   </div>
 
 
