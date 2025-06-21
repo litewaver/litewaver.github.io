@@ -153,3 +153,11 @@ const body = document.body;
 toggleButton.addEventListener('click', () => {
   body.classList.toggle('liteMode');
 });
+
+
+  //lite mode
+   function toggleLightMode() {
+      document.body.classList.toggle("lite-mode");
+    }
+
+    

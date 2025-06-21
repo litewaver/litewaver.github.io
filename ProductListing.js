@@ -1,5 +1,5 @@
 const product = {
-    name: "trinket",
+    name: "resin trinket",
     price: "$6",
     description: "an exmaple of my physical works",
     image: "assets/product1Image.jpg",

@@ -20,7 +20,8 @@
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/@mui/base@5.0.0-beta.24/dist/bundle.umd.js"></script>
 
- 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  </head>
 </head>
 
 <body class="min-h-screen ">
@@ -84,14 +85,43 @@ echo "Hello, PHP in VS Code!";
 <div class="col-span-1">
  <p class = "basis-1/2 text-center sm:text-left text-balance flex  text-emerald-100 text-2xl">
   <div class="  row-span-2 p-2 hover:bg-zinc-600 max-w-md  shadow-lg bg-black/20 backdrop-blur-sm p-4 border border-white/20 rounded-md">
-  <p class="row-span-2 text-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out">I'm a web developer and designer. Building web applications and learning app development is the best way for me to express my personal mantra and creative ethos to share with you.
-  <br>
-  <br> For 3 years I've specialized in full-stack development <br>building web & mobile applications with JS and TypeScript.
-  <br> 
-  <br></p>
+  <p class="row-span-2 text-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out"> 
+I like playing bass, guitar, and drawing in my spare time.</p>
 </div>
 </h3>
 
+
+
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./assets/myguitar.jpg" class="d-block w-100" alt="vyktorya-guitar`">
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/notredame.jpg" class="d-block w-100" alt="notre-dame">
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/sanrio.jpg" class="d-block w-100" alt="cinnamoroll">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+<div class="container ">
+<button onclick="toggleLiteMode()">lite mode
+  <i class="fa-solid fa-sun"></i>
+</button>
+</div>
 
 <div class="row-span-2"
 <div class=" max-w-full text-lg shadow-lg bg-black/20 backdrop-blur-sm border border-white/30 rounded-md p-7 m-6">
@@ -200,12 +230,10 @@ echo "Hello, PHP in VS Code!";
 
 <div id="product-container" class="text-fuchsia-300 animate flex  overflow-hidden transform hover:scale-105  md:w-50 md:h-50  rounded-lg shadow-lg tilt-card m-6 transition-transform duration-300 ease-out">
     
+<div>
+  
+  
 
-
-
-<div><button id="liteMode">lite mode
-  <i class="fa-sun "></i>
-</button>
 </div>
 
 
@@ -302,7 +330,7 @@ echo "Hello, PHP in VS Code!";
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     </div>
 </body>
 </html>
