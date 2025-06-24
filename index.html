@@ -20,8 +20,6 @@
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/@mui/base@5.0.0-beta.24/dist/bundle.umd.js"></script>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-  </head>
 </head>
 
 <body class="min-h-screen ">
@@ -51,23 +49,22 @@ echo .date()
 echo "Hello, PHP in VS Code!";
 ?>
 
-<main class=" grid grid-flow-col grid-rows-2 gap-4">
+<main class=" grid grid-flow-col grid-rows-3 gap-4 flex justify-center">
 
 <div class="row p-7 col-span-3">
   <h1 class=" col-span-2 w-full m-2 md:w-1/2 p-4 lg:hover:text-gray-700  sm:text-pink-100  md:text-4xl sm:text-5xl    transition duration-300  ">
     Vic Joseph | Full Stack Developer 
   </h1>
 
-<h2 class="row-span-3">
+
     <img src="./assets/image2.jpg" alt="Victoria Joseph" class=" animate w-90 h-auto  transform hover:scale-105  md:w-60 md:h-50 sm:w-30 sm:h-30   rounded-lg shadow-lg tilt-card m-6 transition-transform duration-300 ease-out">
     <div class="flex flex-wrap">
 
 </h2>
 
-<div class="max-w-full col-span-2 grow-0 max-w-md mx-auto  h-screen p-4 sm:p-6 md:p-8 lg:max-h-md   ">
-    <h3 class="row col-span-2 row-span-2  col-span-2  basis-1/2 text-center sm:text-left text-balance flex  text-emerald-100 text-2xl">
-      <div class="  col-span-2 row-span-2 p-2 hover:bg-zinc-600 max-w-md  shadow-lg bg-black/20 backdrop-blur-sm p-4 border border-white/20 rounded-md">
-      <p class="col-span-2 row-span-2 text-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out">I'm a web developer and designer. Building web applications and learning app development is the best way for me to express my personal mantra and creative ethos to share with you.
+<div class="row-span-3 first-letter:max-w-full grow-0 max-w-md mx-auto  h-screen p-4 sm:p-6 md:p-8 lg:max-h-md   ">
+    <h3 class="  basis-1/2 text-center sm:text-left text-balance flex  text-emerald-100 text-2xl">
+      <div class="   p-2 hover:bg-zinc-600 max-w-md  shadow-lg bg-black/20 backdrop-blur-sm p-4 border border-white/20 rounded-md">
       <br>
       <br> For 3 years I've specialized in full-stack development <br>building web & mobile applications with JS and TypeScript.
       <br> </p>
@@ -92,28 +89,6 @@ I like playing bass, guitar, and drawing in my spare time.</p>
 
 
 
-<div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./assets/myguitar.jpg" class="d-block w-100" alt="vyktorya-guitar`">
-    </div>
-    <div class="carousel-item">
-      <img src="./assets/notredame.jpg" class="d-block w-100" alt="notre-dame">
-    </div>
-    <div class="carousel-item">
-      <img src="./assets/sanrio.jpg" class="d-block w-100" alt="cinnamoroll">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
 
 
 
@@ -123,14 +98,14 @@ I like playing bass, guitar, and drawing in my spare time.</p>
 </button>
 </div>
 
-<div class="row-span-2"
-<div class=" max-w-full text-lg shadow-lg bg-black/20 backdrop-blur-sm border border-white/30 rounded-md p-7 m-6">
+
+<div class="row-start-1 row-end-4"></div>
+<div class="  text-lg shadow-lg bg-black/20 backdrop-blur-sm border border-white/30 rounded-md p-7 m-6">
       <a href="https://github.com/litewaver/litewaver.github.io/blob/c8e74df44766b46895231e7ec5ccf734f62f3fbe/assets/figma-mockup-portfolio.png" target="_blank">
-        <img src="./assets/figma-mockup-portfolio.png "alt="figma-mockup" class="animate w-200 h-auto  transform hover:scale-105  md:w-50 md:h-auto sm:w-30 sm:h-30   rounded-lg shadow-lg tilt-card m-6 transition-transform duration-300 ease-out">
+        <img src="./assets/figma-mockup-portfolio.png "alt="figma-mockup" class="animate w-50 h-auto  transform hover:scale-105  md:w-50 md:h-auto sm:w-30 sm:h-30   rounded-lg shadow-lg tilt-card m-6 transition-transform duration-300 ease-out">
       </a>
         <p class="text-fuchsia-300">Figma Portfolio mockup</p>
       </div>
-
     
 
 
@@ -330,8 +305,7 @@ I like playing bass, guitar, and drawing in my spare time.</p>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-    </div>
+
 </body>
 </html>
 
