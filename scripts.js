@@ -6,9 +6,6 @@
       scroll.Trigger: '.box'
       x:100
 
-  let button = document.createElement("button");
-    button.innerHTML = "follow me";
-    document.body.appendChild(button);
 
 
     window.onload = function() {
@@ -24,3 +21,6 @@
       magicButton.addEventListener("mouseout", function () {
         magicButton.src = normalButton;
       });
+    };
+
+    
