@@ -24,3 +24,25 @@
     };
 
     
+    //counter
+      // Get the current count from localStorage
+  let count = localStorage.getItem("visitCount");
+
+  // If no count, start from 0
+  if (count === null) {
+    count = 1;
+  } else {
+    count = parseInt(count) + 1;
+  }
+
+  // Save the updated count
+  localStorage.setItem("visitCount", count);
+
+  // Show it on the page
+  document.getElementById("visit-count").innerText = count;
+
+    fetch("visit-counter.php")
+    .then(res => res.text())
+    .then(count => {
+      document.getElementById("global-count").innerText = count;
+    });
