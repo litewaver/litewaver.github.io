@@ -221,3 +221,20 @@ audio, {
 
 .carousel-btn--prev { left: 2em; }
 .carousel-btn--next { right: 2em; }
+
+.visitor-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px;
+    font-family: monospace;
+    color: #e4a4e5;
+}
+
+.visitor-counter img {
+    height: 25px;
+    width: auto;
+    border-radius: 6px;
+}
+
