@@ -194,3 +194,50 @@ window.addEventListener("resize", () => {
 });
 
 
+
+<section id="comments" class="max-w-3xl mx-auto p-6">
+
+    <h2 class="text-3xl font-bold text-emerald-400 mb-2">
+        Community Comments
+    </h2>
+
+    <p class="text-gray-400 mb-6">
+        Leave a message and connect with other visitors.
+    </p>
+
+    <form id="commentForm" class="space-y-4">
+
+        <input
+            id="commentName"
+            type="text"
+            placeholder="Your name"
+            maxlength="50"
+            required
+            class="w-full p-3 rounded-lg bg-gray-900
+                   border border-gray-700 text-white"
+        />
+
+        <textarea
+            id="commentMessage"
+            placeholder="Write a comment..."
+            maxlength="1000"
+            required
+            class="w-full p-3 rounded-lg bg-gray-900
+                   border border-gray-700 text-white"
+        ></textarea>
+
+        <button
+            type="submit"
+            class="bg-emerald-500 hover:bg-emerald-600
+                   text-white px-6 py-3 rounded-lg"
+        >
+            Post Comment
+        </button>
+
+    </form>
+
+    <div id="commentFeed" class="mt-8 space-y-4">
+        <!-- Comments appear here -->
+    </div>
+
+</section>

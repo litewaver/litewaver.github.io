@@ -7,7 +7,6 @@
   <title>Full Stack Developer Portfolio</title>
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
-  <link href ="./styles/input.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,8 +24,6 @@
 <body >
 
 
-<script type="module" src="/src/main.jsx"></script>
-
 
 
 
@@ -35,7 +32,7 @@
     <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
         <!-- Logo -->
-        <a href="#home" class="text-2xl font-bold tracking-tight text-white">
+        <a href="#home" class="text-2xl font-mono text-emerald-200 transition hover:text-emerald-400">
             litewaver<span class="font-mono text-emerald-200 "> | Victoria Joseph</span>
         </a>
 
@@ -86,13 +83,6 @@
             </li>
 
             <li>
-                <a href="#resume" class="block rounded-lg px-4 py-3 text-gray-300 transition hover:bg-white/5 hover:text-emerald-400">
-                    Resume
-                    
-                </a>
-            </li>
-
-            <li>
                 <a href="#contact" class="block rounded-lg px-4 py-3 text-gray-300 transition hover:bg-white/5 hover:text-emerald-400">
                     Contact
                 </a>
@@ -108,8 +98,8 @@
 <main class=" flex flex-col grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 ">
 
 <section id="home"  class="basis-2xs items-center justify-center min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
-  <h1 class="  lg:hover:text-gray-700  sm:text-pink-100  md:text-4xl sm:text-5xl    transition duration-300  ">
-    Vic Joseph | Full Stack Developer 
+  <h1 class="  lg:hover:text-gray-700  sm:text-pink-100  md:text-4l sm:text-4xl    transition duration-300  ">
+    Vic Joseph | Full Stack Developer <br>
   </h1>
 
 </section>
@@ -171,7 +161,7 @@
 
     <button id="resumeButton"  class="transform hover:scale-105 transition-transform duration-300 ease-in-out  px-4 py-2 bg-950 border border-white rounded-lg shadow-md hover:bg-violet-300 focus:outline focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75" !>
       <a href="assets/vicjoseph-resume.pdf" target="_blank" rel="noopener noreferrer">
-        my resume
+        my resume (pdf)
          <img id="purpleGif" src="./assets/star-sticker-holographic.gif" alt="holographic" style="display: none; width:150px;">
       </a>
      
@@ -179,30 +169,25 @@
   </h3>
 </div>
     
-<div class=" flex items-end first-letter:max-w-full grow-0 max-w-md mx-auto  p-4 sm:p-6 md:p-8 lg:max-h-md   ">
-    <h3 class="  text-center sm:text-left text-balance flex  text-emerald-100 text-2xl">
-      <div class="   p-2 hover:bg-zinc-600 max-w-md  shadow-lg bg-black/20 backdrop-blur-sm p-4 border border-white/20 rounded-md">
-      <br> As of 11/2026 I'm currently learning C# by building this site's backend with ASP.NET Core and Entity Framework Core.
-      <br> </p>
-      <br>
-     
-    </button>
-  </h3>
-</div>
 
 <section>
  <p class = " text-center sm:text-left text-balance flex  text-emerald-100 text-2xl">
   <div class="  row-span-2 p-2 hover:bg-zinc-600 max-w-md  shadow-lg bg-black/20 backdrop-blur-sm p-4 border border-white/20 rounded-md">
   <p class="row-span-2 text-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out"> 
-I like playing bass, guitar, and drawing in my spare time.</p>
+I like playing bass, guitar, and making crafts in my spare time.</p>
+<img src="./assets/bionichand.jpg" alt="bionic-hand" width="200" height="200" class="animate w-50 h-auto  ">
+
 </section>
 
-<img src="./assets/bionichand.jpg" alt="bionic-hand" width="200" height="200" class="animate w-50 h-auto  ">
 
 
 <div class=" text-lg shadow-lg bg-black/20 backdrop-blur-sm border border-white/30 rounded-md"> 
   <a href="https://github.com/litewaver/litewaver.github.io/blob/c8e74df44766b46895231e7ec5ccf734f62f3fbe/assets/figma-mockup-portfolio.png" target="_blank">
-    <img src="./assets/figma-mockup-portfolio.png "alt="figma-mockup" class="animate w-50 h-auto  transform hover:scale-105  md:w-50 md:h-auto sm:w-30 sm:h-30   rounded-lg shadow-lg tilt-card m-6 transition-transform duration-300 ease-out">
+    <img
+    src="./assets/figma-mockup-portfolio.png"
+    alt="Figma portfolio mockup"
+    class="animate w-50 h-auto transform hover:scale-105"
+>
   </a>
     <p class="text-fuchsia-300">Figma Portfolio mockup</p>
 </div>
@@ -227,7 +212,7 @@ I like playing bass, guitar, and drawing in my spare time.</p>
 
 
 
-  <form id="contactForm"class="max-w-md mx-auto mt-8" method="POST" action="form.php">
+  <form id="contactForm" class="max-w-md mx-auto mt-8" method="POST" action="form.php">
   <div class="mb-4">
     <label for="name" class="block text-gray-500 font-bold mb-2">Name</label>
     <input   type="text"
@@ -407,9 +392,102 @@ updateVisitorCount();
 
 
 
+<!-- LIVE COMMENT SECTION -->
+<section id="live-comments"
+         class="max-w-3xl mx-auto px-5 py-16">
 
+    <div class="mb-8">
+        <h2 class="text-3xl font-bold text-emerald-300 mb-3">
+            Let's Connect
+        </h2>
 
+        <p class="text-gray-400">
+            Have a question or want to say hello?
+            Leave me a message below!
+        </p>
+    </div>
 
+    <!-- Comment Form -->
+    <form id="commentForm"
+          class="bg-gray-900/70 backdrop-blur-xl
+                 border border-emerald-500/20
+                 rounded-2xl p-6 space-y-5">
+
+        <!-- Visitor Name -->
+        <div>
+            <label for="commentName"
+                   class="block text-emerald-100 mb-2">
+                Your Name
+            </label>
+
+            <input
+                type="text"
+                id="commentName"
+                name="name"
+                placeholder="Enter your name"
+                maxlength="50"
+                required
+                class="w-full p-3 rounded-lg
+                       bg-gray-800 text-white
+                       border border-white/10
+                       focus:border-emerald-400
+                       outline-none"
+            />
+        </div>
+
+        <!-- Visitor Message -->
+        <div>
+            <label for="commentMessage"
+                   class="block text-emerald-100 mb-2">
+                Your Message
+            </label>
+
+            <textarea
+                id="commentMessage"
+                name="message"
+                placeholder="Write your message here..."
+                minlength="10"
+                maxlength="1000"
+                rows="5"
+                required
+                class="w-full p-3 rounded-lg
+                       bg-gray-800 text-white
+                       border border-white/10
+                       focus:border-emerald-400
+                       outline-none resize-y"
+            ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button
+            type="submit"
+            class="w-full sm:w-auto
+                   bg-emerald-500 hover:bg-emerald-400
+                   text-gray-950 font-bold
+                   px-8 py-3 rounded-lg
+                   transition duration-300
+                   hover:scale-105">
+
+            Post Comment
+        </button>
+
+    </form>
+
+    <!-- Live Comments Display -->
+    <div class="mt-10">
+
+        <h3 class="text-xl font-semibold text-emerald-200 mb-5">
+            Community Messages
+        </h3>
+
+        <div id="commentFeed" class="space-y-4">
+            <!-- JavaScript inserts comments here -->
+        </div>
+
+    </div>
+
+</section>
+<!-- END LIVE COMMENT SECTION -->
 
 
 
@@ -420,7 +498,7 @@ updateVisitorCount();
 
 
     </div>
-
+    <script type="module" src="/src/js/comments.js"></script>
     <script async src="../litewaver.github.io/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script>
