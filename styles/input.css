@@ -238,3 +238,86 @@ audio, {
     border-radius: 6px;
 }
 
+.resume-container {
+  position: relative;
+  display: inline-block;
+}
+
+#purpleGif {
+  display: none;
+  position: absolute;
+  width: 150px;
+  height: auto;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* Display GIF when hovering over button */
+.resume-container:hover #purpleGif {
+  display: block;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+/* Desktop navigation */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Hide hamburger on desktop */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Mobile navigation */
+@media screen and (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: #101820;
+        gap: 25px;
+        z-index: 1000;
+    }
+
+    /* Show menu when active */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+}
