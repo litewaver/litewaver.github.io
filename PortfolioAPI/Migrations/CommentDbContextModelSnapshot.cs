@@ -16,7 +16,7 @@ partial class CommentDbContextModelSnapshot : ModelSnapshot
     // If you encounter a merge conflict in the line below, it means you need to
     // discard one of the migration branches and recreate its migrations on top of
     // the other branch. See https://aka.ms/efcore-docs-migrations-conflicts for more info.
-    public override string LastMigrationId => "20261125203057_InitialCreate";
+    public override string LastMigrationId => "20261125231247_AddRepliesAndReactions";
 
     protected override void BuildModel(ModelBuilder modelBuilder)
     {
@@ -36,17 +36,82 @@ partial class CommentDbContextModelSnapshot : ModelSnapshot
                 b.Property<DateTime>("CreatedAt")
                     .HasColumnType("datetime2");
 
+                b.Property<bool>("IsHidden")
+                    .HasColumnType("bit");
+
                 b.Property<string>("Message")
                     .IsRequired()
+                    .HasMaxLength(1000)
                     .HasColumnType("nvarchar(max)");
 
                 b.Property<string>("Name")
                     .IsRequired()
+                    .HasMaxLength(50)
                     .HasColumnType("nvarchar(max)");
+
+                b.Property<Guid?>("ParentCommentId")
+                    .HasColumnType("uniqueidentifier");
 
                 b.HasKey("Id");
 
+                b.HasIndex("ParentCommentId");
+
                 b.ToTable("Comments");
+            });
+
+        modelBuilder.Entity("PortfolioAPI.Models.CommentReaction", b =>
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
+
+                b.Property<Guid>("CommentId")
+                    .HasColumnType("uniqueidentifier");
+
+                b.Property<string>("Emoji")
+                    .IsRequired()
+                    .HasMaxLength(16)
+                    .HasColumnType("nvarchar(16)");
+
+                b.Property<string>("VisitorId")
+                    .IsRequired()
+                    .HasMaxLength(64)
+                    .HasColumnType("nvarchar(64)");
+
+                b.HasKey("Id");
+
+                b.HasIndex("CommentId", "VisitorId")
+                    .IsUnique();
+
+                b.ToTable("CommentReactions");
+            });
+
+        modelBuilder.Entity("PortfolioAPI.Models.Comment", b =>
+            {
+                b.HasOne("PortfolioAPI.Models.Comment", "ParentComment")
+                    .WithMany("Replies")
+                    .HasForeignKey("ParentCommentId")
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                b.Navigation("ParentComment");
+            });
+
+        modelBuilder.Entity("PortfolioAPI.Models.CommentReaction", b =>
+            {
+                b.HasOne("PortfolioAPI.Models.Comment", "Comment")
+                    .WithMany("Reactions")
+                    .HasForeignKey("CommentId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
+
+                b.Navigation("Comment");
+            });
+
+        modelBuilder.Entity("PortfolioAPI.Models.Comment", b =>
+            {
+                b.Navigation("Reactions");
+
+                b.Navigation("Replies");
             });
 #pragma warning restore 612, 618
     }

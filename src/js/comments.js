@@ -1,10 +1,8 @@
 
 import * as signalR from "@microsoft/signalr";
 
-// Your ASP.NET Core backend URL
 const API_URL = "http://localhost:5081";
 
-// Find HTML elements
 const commentForm = document.getElementById("commentForm");
 const commentFeed = document.getElementById("commentFeed");
 const nameInput = document.getElementById("commentName");
@@ -16,31 +14,32 @@ if (!commentForm || !commentFeed || !nameInput || !messageInput) {
     console.error("Comment form elements could not be found.");
 } else {
 
-    // Create SignalR connection
+    // Connect to the C# SignalR hub.
     const connection = new signalR.HubConnectionBuilder()
         .withUrl(`${API_URL}/hubs/comments`)
         .withAutomaticReconnect()
         .build();
 
-    // Safely display a comment
+    // Display a comment safely.
     function displayComment(comment) {
-
-        if (!comment || !comment.id || displayedCommentIds.has(comment.id)) {
+        if (!comment || !comment.id ||
+            displayedCommentIds.has(comment.id)) {
             return;
         }
 
         displayedCommentIds.add(comment.id);
 
         const card = document.createElement("article");
+
         card.className =
-            "bg-gray-900 border border-emerald-500/20 rounded-xl p-4 mb-4";
+            "bg-gray-900/80 border border-emerald-500/20 rounded-xl p-4 mb-4";
 
         const name = document.createElement("h3");
         name.className = "text-emerald-400 font-bold";
-        name.textContent = comment.name;
+        name.textContent = comment.name || "Anonymous";
 
         const message = document.createElement("p");
-        message.className = "text-white mt-2";
+        message.className = "text-white mt-2 whitespace-pre-wrap";
         message.textContent = comment.message;
 
         const date = document.createElement("small");
@@ -56,13 +55,13 @@ if (!commentForm || !commentFeed || !nameInput || !messageInput) {
         commentFeed.appendChild(card);
     }
 
-    // Receive live comments
+    // Receive comments from SignalR.
     connection.on("ReceiveComment", (comment) => {
         console.log("New comment received:", comment);
         displayComment(comment);
     });
 
-    // Load saved comments
+    // Load comments already saved in the database.
     async function loadPreviousComments() {
         try {
             const response = await fetch(`${API_URL}/api/comments`);
@@ -85,7 +84,7 @@ if (!commentForm || !commentFeed || !nameInput || !messageInput) {
         }
     }
 
-    // Start SignalR
+    // Start SignalR.
     async function startConnection() {
         try {
             await connection.start();
@@ -96,24 +95,31 @@ if (!commentForm || !commentFeed || !nameInput || !messageInput) {
 
         } catch (error) {
             console.error("SignalR connection failed:", error);
+
+            // Try again after a short delay.
+            setTimeout(startConnection, 5000);
         }
     }
 
-    // Reconnect and refresh saved comments
+    // Refresh saved comments after reconnecting.
     connection.onreconnected(async () => {
         console.log("SignalR reconnected!");
+
+        displayedCommentIds.clear();
+        commentFeed.innerHTML = "";
+
         await loadPreviousComments();
     });
 
-    // Submit comments
+    // Submit a comment.
     commentForm.addEventListener("submit", async (event) => {
         event.preventDefault();
 
         const name = nameInput.value.trim();
         const message = messageInput.value.trim();
 
-        if (!name || name.length > 50) {
-            alert("Name must contain between 1 and 50 characters.");
+        if (name.length > 50) {
+            alert("Name cannot exceed 50 characters.");
             return;
         }
 
@@ -122,10 +128,13 @@ if (!commentForm || !commentFeed || !nameInput || !messageInput) {
             return;
         }
 
-        const button = commentForm.querySelector('button[type="submit"]');
+        const button = commentForm.querySelector(
+            'button[type="submit"]'
+        );
 
         if (button) {
             button.disabled = true;
+            button.textContent = "Posting...";
         }
 
         try {
@@ -134,7 +143,10 @@ if (!commentForm || !commentFeed || !nameInput || !messageInput) {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ name, message })
+                body: JSON.stringify({
+                    name: name || "Anonymous",
+                    message
+                })
             });
 
             if (!response.ok) {
@@ -145,7 +157,8 @@ if (!commentForm || !commentFeed || !nameInput || !messageInput) {
                 );
             }
 
-            messageInput.value = "";
+            // Clear the form after successful submission.
+            commentForm.reset();
 
             console.log("Comment submitted successfully!");
 
@@ -156,10 +169,11 @@ if (!commentForm || !commentFeed || !nameInput || !messageInput) {
         } finally {
             if (button) {
                 button.disabled = false;
+                button.textContent = "Post Comment";
             }
         }
     });
 
-    // Initialize
+    // Initialize the comment system.
     startConnection();
 }
