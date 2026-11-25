@@ -105,12 +105,44 @@
 
 
 
-<main class=" flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+<main class=" flex flex-col grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 ">
 
-<section id="home" class="basis-2xs items-center justify-center min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+<section id="home"  class="basis-2xs items-center justify-center min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
   <h1 class="  lg:hover:text-gray-700  sm:text-pink-100  md:text-4xl sm:text-5xl    transition duration-300  ">
     Vic Joseph | Full Stack Developer 
   </h1>
+
+</section>
+
+<section>
+<div class="updates group  max-w-sm rounded-xl
+            border border-white/10 bg-black/20
+            backdrop-blur-md p-5 shadow-xl">
+
+    <h2 class="text-lg font-bold text-emerald-300 mb-3">
+        Development Log
+    </h2>
+
+    <div class="space-y-5">
+
+        <!-- Update 1 -->
+        <div class="border-l-2 border-emerald-400 pl-4">
+            <span class="text-xs text-gray-400">11/25/2026</span>
+            <p class="text-emerald-100 mt-1">
+                Building contact functionality with C#/.NET.
+            </p>
+        </div>
+
+        <!-- Update 2 -->
+        <div class="border-l-2 border-emerald-400/40 pl-4">
+            <span class="text-xs text-gray-400">11/2026</span>
+            <p class="text-emerald-100 mt-1">
+                Improving mobile navigation and accessibility.
+            </p>
+        </div>
+
+    </div>
+
 </div>
 </section>
 
@@ -128,15 +160,6 @@
 
 </div>
 
-
-<div class="visitor-counter ">
-    <p>You've visited my portfolio!</p>
-
-    <img
-        src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Flitewaver.github.io%2F&label=visitors&icon=heart-fill&color=%23e4a4e5&message=&style=plastic&tz=UTC"
-        alt="Litewaver portfolio visitor counter"
-    />
-</div>
 
 <div class=" flex items-end first-letter:max-w-full grow-0 max-w-md mx-auto  h-screen p-4 sm:p-6 md:p-8 lg:max-h-md   ">
     <h3 class="  basis-1/2 text-center sm:text-left text-balance flex  text-emerald-100 text-2xl">
@@ -156,10 +179,9 @@
   </h3>
 </div>
     
-<div class=" flex items-end first-letter:max-w-full grow-0 max-w-md mx-auto  h-screen p-4 sm:p-6 md:p-8 lg:max-h-md   ">
-    <h3 class="  basis-1/2 text-center sm:text-left text-balance flex  text-emerald-100 text-2xl">
+<div class=" flex items-end first-letter:max-w-full grow-0 max-w-md mx-auto  p-4 sm:p-6 md:p-8 lg:max-h-md   ">
+    <h3 class="  text-center sm:text-left text-balance flex  text-emerald-100 text-2xl">
       <div class="   p-2 hover:bg-zinc-600 max-w-md  shadow-lg bg-black/20 backdrop-blur-sm p-4 border border-white/20 rounded-md">
-      <br>
       <br> As of 11/2026 I'm currently learning C# by building this site's backend with ASP.NET Core and Entity Framework Core.
       <br> </p>
       <br>
@@ -168,15 +190,14 @@
   </h3>
 </div>
 
-
- <p class = "basis-1/2 text-center sm:text-left text-balance flex  text-emerald-100 text-2xl">
+<section>
+ <p class = " text-center sm:text-left text-balance flex  text-emerald-100 text-2xl">
   <div class="  row-span-2 p-2 hover:bg-zinc-600 max-w-md  shadow-lg bg-black/20 backdrop-blur-sm p-4 border border-white/20 rounded-md">
   <p class="row-span-2 text-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out"> 
 I like playing bass, guitar, and drawing in my spare time.</p>
+</section>
 
-</h3>
-
-<img src="./assets/bionichand.jpg" alt="bionic-hand" width="300" height="300" class="animate w-50 h-auto  ">
+<img src="./assets/bionichand.jpg" alt="bionic-hand" width="200" height="200" class="animate w-50 h-auto  ">
 
 
 <div class=" text-lg shadow-lg bg-black/20 backdrop-blur-sm border border-white/30 rounded-md"> 
@@ -203,36 +224,6 @@ I like playing bass, guitar, and drawing in my spare time.</p>
 
 </div>
 
-
-<div class="updates group w-full max-w-sm rounded-xl
-            border border-white/10 bg-black/20
-            backdrop-blur-md p-5 shadow-xl">
-
-    <h2 class="text-lg font-bold text-emerald-300 mb-5">
-        Development Log
-    </h2>
-
-    <div class="space-y-5">
-
-        <!-- Update 1 -->
-        <div class="border-l-2 border-emerald-400 pl-4">
-            <span class="text-xs text-gray-400">11/25/2026</span>
-            <p class="text-emerald-100 mt-1">
-                Building contact functionality with C#/.NET.
-            </p>
-        </div>
-
-        <!-- Update 2 -->
-        <div class="border-l-2 border-emerald-400/40 pl-4">
-            <span class="text-xs text-gray-400">11/2026</span>
-            <p class="text-emerald-100 mt-1">
-                Improving mobile navigation and accessibility.
-            </p>
-        </div>
-
-    </div>
-
-</div>
 
 
 
@@ -361,7 +352,16 @@ I like playing bass, guitar, and drawing in my spare time.</p>
     <i class="fa-solid fa-caret-up"></i>
   </button>
 
+<section>
+<div class="visitor-counter ">
+    <p>You've visited my portfolio!</p>
 
+    <img
+        src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Flitewaver.github.io%2F&label=visitors&icon=heart-fill&color=%23e4a4e5&message=&style=plastic&tz=UTC"
+        alt="Litewaver portfolio visitor counter"
+    />
+</div>
+</section>
 
 <section class="visitor-counter">
     <span class="counter-label">♡ PORTFOLIO VISITORS</span>
