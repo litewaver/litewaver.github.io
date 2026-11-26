@@ -16,7 +16,7 @@ partial class CommentDbContextModelSnapshot : ModelSnapshot
     // If you encounter a merge conflict in the line below, it means you need to
     // discard one of the migration branches and recreate its migrations on top of
     // the other branch. See https://aka.ms/efcore-docs-migrations-conflicts for more info.
-    public override string LastMigrationId => "20261125231247_AddRepliesAndReactions";
+    public override string LastMigrationId => "20261126000751_AddCommentReports";
 
     protected override void BuildModel(ModelBuilder modelBuilder)
     {
@@ -86,6 +86,50 @@ partial class CommentDbContextModelSnapshot : ModelSnapshot
                 b.ToTable("CommentReactions");
             });
 
+        modelBuilder.Entity("PortfolioAPI.Models.CommentReport", b =>
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
+
+                b.Property<Guid>("CommentId")
+                    .HasColumnType("uniqueidentifier");
+
+                b.Property<DateTime>("CreatedAt")
+                    .HasColumnType("datetime2");
+
+                b.Property<string>("Details")
+                    .HasMaxLength(500)
+                    .HasColumnType("nvarchar(500)");
+
+                b.Property<string>("Reason")
+                    .IsRequired()
+                    .HasMaxLength(40)
+                    .HasColumnType("nvarchar(40)");
+
+                b.Property<DateTime?>("ReviewedAt")
+                    .HasColumnType("datetime2");
+
+                b.Property<string>("Status")
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .HasColumnType("nvarchar(20)");
+
+                b.Property<string>("VisitorId")
+                    .IsRequired()
+                    .HasMaxLength(64)
+                    .HasColumnType("nvarchar(64)");
+
+                b.HasKey("Id");
+
+                b.HasIndex("CommentId", "VisitorId")
+                    .IsUnique();
+
+                b.HasIndex("Status", "CreatedAt");
+
+                b.ToTable("CommentReports");
+            });
+
         modelBuilder.Entity("PortfolioAPI.Models.Comment", b =>
             {
                 b.HasOne("PortfolioAPI.Models.Comment", "ParentComment")
@@ -100,6 +144,17 @@ partial class CommentDbContextModelSnapshot : ModelSnapshot
             {
                 b.HasOne("PortfolioAPI.Models.Comment", "Comment")
                     .WithMany("Reactions")
+                    .HasForeignKey("CommentId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
+
+                b.Navigation("Comment");
+            });
+
+        modelBuilder.Entity("PortfolioAPI.Models.CommentReport", b =>
+            {
+                b.HasOne("PortfolioAPI.Models.Comment", "Comment")
+                    .WithMany()
                     .HasForeignKey("CommentId")
                     .OnDelete(DeleteBehavior.Cascade)
                     .IsRequired();
