@@ -1,3 +1,4 @@
+[![Deploy Vite Website to GitHub Pages](https://github.com/litewaver/litewaver.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/litewaver/litewaver.github.io/actions/workflows/deploy.yml)
 # Website Portfolio
 
 ## Table of Contents
