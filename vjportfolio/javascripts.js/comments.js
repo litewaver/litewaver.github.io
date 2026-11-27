@@ -2,7 +2,8 @@
 import * as signalR from "@microsoft/signalr";
 
 // Change this to the HTTP address shown by dotnet run
-const API_URL = "http://localhost:5000";
+// Production ASP.NET Core API
+const API_URL = "https://litewaver.runasp.net";
 
 const commentForm = document.getElementById("commentForm");
 const commentFeed = document.getElementById("commentFeed");
