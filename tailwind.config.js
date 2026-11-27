@@ -1,47 +1,26 @@
-/** @type {import('tailwindcss').Config} */
+﻿/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/index.html**/*.{html,js}",
-    "./src/components/**/*.{html,js,}",
-    "./src/app/**/*.{html,js,}",
+    "./index.html",
+    "./src/**/*.{html,js,jsx,ts,tsx}"
   ],
   theme: {
     extend: {
-
-      extend: {
-        keyframes: {
-          shine: {
-            '100%': { left: '125%' },
-          },
-        },
-        animation: {
-          shine: 'shine 1s',
-        },
+      keyframes: {
+        shine: {
+          "100%": { left: "125%" }
+        }
       },
-    },
-
-      backdropFilter: ["responsive"],
+      animation: {
+        shine: "shine 1s"
+      },
       colors: {
-        "bg-dark": "#03031e",
+        "bg-dark": "#03031e"
       },
       fontFamily: {
-        "source-code-pro": ['"Source Code Pro"', "monospace"],
-      },
-      container: {
-        padding: {
-          DEFAULT: "1rem",
-          sm: "2rem",
-          lg: "4rem",
-          xl: "5rem",
-          "2xl": "6rem",
-
-          width,
-        },
-      },
-      plugins: [
-        require("@tailwindcss/forms"),
-        require("@tailwindcss/typography"),
-      ],
-    },
+        "source-code-pro": ['"Source Code Pro"', "monospace"]
+      }
+    }
   },
+  plugins: []
 };

@@ -1,14 +1,15 @@
+﻿import "../css/input.css";
 
 import * as signalR from "@microsoft/signalr";
 
-const API_URL = "http://localhost:5081";
+const API_URL = "https://litewaver.runasp.net";
 
 const commentForm = document.getElementById("commentForm");
 const commentFeed = document.getElementById("commentFeed");
 const nameInput = document.getElementById("commentName");
 const messageInput = document.getElementById("commentMessage");
 
-const emojis = ["❤️", "👍", "🔥", "😂", "👏", "💡"];
+const emojis = ["â¤ï¸", "ðŸ‘", "ðŸ”¥", "ðŸ˜‚", "ðŸ‘", "ðŸ’¡"];
 
 const commentElements = new Map();
 
@@ -490,3 +491,5 @@ parentContainer.appendChild(card);
 
     startCommentSystem();
 }
+
+
