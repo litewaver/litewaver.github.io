@@ -294,45 +294,77 @@ I like playing bass, guitar, and making crafts in my spare time.</p>
 
 
 
-  <form id="contactForm" class="max-w-md mx-auto mt-8" method="POST" action="form.php">
+  <form id="contactForm" class="max-w-md mx-auto mt-8">
   <div class="mb-4">
     <p>send victoria a private message:</p>
     <label for="name" class="block text-gray-500 font-bold mb-2">Name</label>
-    <input   type="text"
-                id="name"
-                name="name"
-                
-                maxlength="100"
-                placeholder="leave blank to post anonymously"
-                type="text" id="name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+    <input
+      type="text"
+      id="name"
+      name="name"
+      required
+      maxlength="100"
+      placeholder="Your name"
+      class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
   </div>
+
   <div class="mb-4">
     <label for="email" class="block text-gray-500 font-bold mb-2">Email</label>
-    <input   type="email"
-                id="email"
-                name="email"
-                required
-                maxlength="254"
-                placeholder="you@example.com" type="email" id="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+    <input
+      type="email"
+      id="email"
+      name="email"
+      required
+      maxlength="254"
+      placeholder="you@example.com"
+      class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
   </div>
+
+  <div class="mb-4">
+    <label for="subject" class="block text-gray-500 font-bold mb-2">Subject</label>
+    <input
+      type="text"
+      id="subject"
+      name="subject"
+      required
+      maxlength="150"
+      placeholder="What is your message about?"
+      class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+  </div>
+
   <div class="mb-4">
     <label for="message" class="block text-gray-500 font-bold mb-2">Message</label>
-    <textarea              id="message"
-                name="message"
-                required
-                minlength="10"
-                maxlength="5000"
-                rows="5"
-                placeholder="Write your message..." id="message" name="message" required minlength="10" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+    <textarea
+      id="message"
+      name="message"
+      required
+      minlength="10"
+      maxlength="5000"
+      rows="5"
+      placeholder="Write your message..."
+      class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
   </div>
-      <a href="./assets/vic_joseph_resume (1).pdf" target="_blank" rel="noopener noreferrer">
-  
-        <p>
-          <input type="checkbox" id="terms" name="terms" required>
-          <label for="terms">I accept the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</label>
-      </p>
 
-      <button type="submit" value="Send" id="formStatus" role="status" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-opacity-80   transform hover:scale-105 transition-transform duration-300 ease-in-out  px-4 py-2 bg-950 border border-white rounded-lg shadow-md hover:bg-violet-300 focus:outline focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">Send Message</button>
+  <div class="mb-4">
+    <label class="flex items-start gap-2">
+      <input type="checkbox" id="terms" name="terms" required class="mt-1">
+      <span>
+        I accept the
+        <a href="terms.html" class="underline">Terms of Service</a>
+        and
+        <a href="privacy.html" class="underline">Privacy Policy</a>.
+      </span>
+    </label>
+  </div>
+
+  <button
+    type="submit"
+    id="contactSubmit"
+    class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-opacity-80 transform hover:scale-105 transition-transform duration-300 ease-in-out border border-white rounded-lg shadow-md hover:bg-violet-300 focus:outline focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
+    Send Message
+  </button>
+
+  <p id="contactStatus" role="status" aria-live="polite" class="mt-4"></p>
 </form>
 
 
@@ -345,14 +377,14 @@ I like playing bass, guitar, and making crafts in my spare time.</p>
   transition-all duration-500">
 
   <p class="text-pink-200 hover:text-pink-100 transition-colors">
-    💗 Collaborators & Contributors 💗
+    ðŸ’— Collaborators & Contributors ðŸ’—
 
     <br><br>
 
     <strong>
       <a href="https://work.calvin.press/" 
          class="hover:text-pink-400 transition-colors">
-        💕 Calvin Nguyen
+        ðŸ’• Calvin Nguyen
       </a>
     </strong>
 
@@ -362,7 +394,7 @@ I like playing bass, guitar, and making crafts in my spare time.</p>
       <a href="https://trevorwheeler.com/" 
          class="hover:text-pink-400 transition-colors"
          target="_blank" rel="noopener noreferrer">
-        💗 Trevor Wheeler
+        ðŸ’— Trevor Wheeler
       </a>
     </strong>
 
@@ -371,7 +403,7 @@ I like playing bass, guitar, and making crafts in my spare time.</p>
     <strong>
       <a href="https://www.linkedin.com/in/gregmunt/" 
          class="hover:text-pink-400 transition-colors">
-        💕 Greg Munt
+        ðŸ’• Greg Munt
       </a>
     </strong>
 
@@ -380,7 +412,7 @@ I like playing bass, guitar, and making crafts in my spare time.</p>
     <strong>
       <a href="#" 
          class="hover:text-pink-400 transition-colors">
-        💗 Dragos
+        ðŸ’— Dragos
       </a>
     </strong>
 
@@ -429,7 +461,7 @@ I like playing bass, guitar, and making crafts in my spare time.</p>
     <!-- Copyright -->
     <div class=" text-emerald-100 text-center unselectable sm:font-source-code-pro transform hover:scale-105 transition-transform duration-300 ease-in-out">
       <p>&copy; Victoria Joseph <span id="copyright-year"></span>
-      <p>Made with<span style="color: #c25f6e;"> ❤</span> by vyktorya</p>
+      <p>Made with<span style="color: #c25f6e;"> &#10084;</span> by vyktorya</p>
     </div>
 
     <ul>
@@ -449,7 +481,7 @@ I like playing bass, guitar, and making crafts in my spare time.</p>
 </section>
 
 <section class="visitor-counter">
-    <span class="counter-label">♡ PORTFOLIO VISITORS</span>
+    <span class="counter-label">&#9825; PORTFOLIO VISITORS</span>
 
     <div class="counter-number">
         <span id="global-count">000000</span>
@@ -608,7 +640,7 @@ updateVisitorCount();
       });
     </script>
     
+<script type="module" src="/src/js/contact.js"></script>
 </body>
 </html>
-
 
