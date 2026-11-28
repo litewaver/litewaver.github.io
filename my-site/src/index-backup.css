@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+@import "tailwindcss";
+
+/* ---------- Theme variables ---------- */
+body {
+  /* dark (default) */
+  --page-bg: #04021f;
+  --text: #f0f0f0;
+  --link: #adc8fc;
+  --link-hover: #f8f6e8;
+  --accent: powderblue;
+  --icon-idle: #666;
+  --home-top: #050125;
+  --home-bottom: #c1859e;
+  --home-text: white;
+  --counter: #e4a4e5;
+  --mobile-menu-bg: #101820;
+  --top-btn: bisque;
+
+  background-color: var(--page-bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.lite-mode {
+  /* day theme */
+  --page-bg: bisque;
+  --text: #342b75;
+  --link: #4a3fa0;
+  --link-hover: #050125;
+  --accent: #5fa8c4;
+  --icon-idle: #7a6f9a;
+  --home-top: #ffe9cc;
+  --home-bottom: #e8b4c8;
+  --home-text: #342b75;
+  --counter: #7a2f8f;
+  --mobile-menu-bg: #f3d9b8;
+  --top-btn: #342b75;
+}
+
+main {
+  background-color: var(--page-bg);
+  font-family: "Geist Mono", monospace;
+}
+
+@layer base {
+  @font-face {
+    font-family: "source-code-pro";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/source-code-pro.woff2) format("woff2");
+  }
+}
+
+ul li {
+  list-style: none;
+  margin: 0 15px;
+  text-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+#navbar {
+  position: fixed;
+  padding: 10px 16px;
+  background-color: transparent;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* ---------- Special links ---------- */
+#special-link li a {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: transparent;
+  border-radius: 50%;
+  font-size: 30px;
+  color: var(--icon-idle);
+  transition: 0.5s;
+}
+
+#special-link a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--accent);
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+#special-link a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px var(--accent);
+}
+
+#special-link p:hover {
+  color: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+  text-shadow: 0 0 10px var(--accent);
+}
+
+/* ---------- Link hover effect ---------- */
+a,
+i {
+  color: var(--link);
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover,
+i:hover {
+  color: var(--link-hover);
+}
+
+/* ---------- Buttons ---------- */
+#topbtn {
+  position: fixed;
+  bottom: 50px;
+  right: 60px;
+  padding: 10px 15px;
+  z-index: 100;
+  cursor: pointer;
+  color: var(--top-btn);
+  border-radius: 5px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  border: 2px solid lightgray;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.product img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+}
+
+.buy-button {
+  margin-left: auto;
+  font-size: 24px;
+  cursor: pointer;
+  color: green;
+}
+
+img,
+video,
+audio {
+  max-width: 100%;
+}
+
+/* ---------- Carousel ---------- */
+.carousel-inner {
+  overflow: hidden;
+  position: relative;
+  min-height: var(--carousel-height);
+}
+
+.slide {
+  width: 100%;
+  position: absolute;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-content {
+  position: relative;
+  z-index: 5000;
+}
+
+.slide img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.slide-caption {
+  width: 100%;
+  position: absolute;
+  padding: 2em;
+  left: 0;
+  bottom: 0;
+}
+
+.carousel-btn--prev-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-btn--prev { left: 2em; }
+.carousel-btn--next { right: 2em; }
+
+/* ---------- Visitor counter ---------- */
+.visitor-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+  font-family: monospace;
+  color: var(--counter);
+}
+
+.visitor-counter img {
+  height: 25px;
+  width: auto;
+  border-radius: 6px;
+}
+
+/* ---------- Resume hover GIF ---------- */
+.resume-container {
+  position: relative;
+  display: inline-block;
+}
+
+#purpleGif {
+  display: none;
+  position: absolute;
+  width: 150px;
+  height: auto;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  pointer-events: none;
+}
+
+.resume-container:hover #purpleGif {
+  display: block;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    background: var(--mobile-menu-bg);
+    gap: 25px;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+}
+
+/* ---------- Home ---------- */
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, var(--home-top), var(--home-bottom));
+  color: var(--home-text);
+  text-align: center;
+}
